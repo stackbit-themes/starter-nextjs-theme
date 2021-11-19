@@ -8,7 +8,7 @@ excerpt: >-
   condimentum dignissim justo vel faucibus.
 featuredImage:
   type: ImageBlock
-  url: /images/christin-hume-Hcfwew744z4-unsplash.jpg
+  url: /images/post-4.jpg
   altText: Post Image
 bottomSections:
   - type: CtaSection

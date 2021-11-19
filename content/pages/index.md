@@ -82,7 +82,7 @@ sections:
         icon: arrowRight
     feature:
       type: ImageBlock
-      url: /images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg
+      url: /images/hero-3.jpg
       altText: Hero section image
     styles:
       self:
@@ -246,10 +246,10 @@ sections:
         url: /
         style: primary
     posts:
+      - content/pages/blog/post-four.md
       - content/pages/blog/post-three.md
       - content/pages/blog/post-two.md
       - content/pages/blog/post-one.md
-      - content/pages/blog/post-four.md
     styles:
       self:
         height: auto
