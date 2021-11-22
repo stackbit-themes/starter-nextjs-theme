@@ -255,7 +255,7 @@ sections:
       together
     feature:
       type: ImageBlock
-      url: /images/hero-1.png
+      url: /images/Image-on-the-right.svg
       altText: Hero section image
     styles:
       self:
@@ -292,7 +292,7 @@ sections:
       together
     feature:
       type: ImageBlock
-      url: /images/hero-2.png
+      url: /images/Image-on-the-left.svg
       altText: Hero section image
     styles:
       self:
