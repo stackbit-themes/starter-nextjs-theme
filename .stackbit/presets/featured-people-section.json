@@ -43,7 +43,7 @@
         },
         {
             "label": "2 columns alt dark",
-            "thumbnail": "images/people-2-col-alt-light.png",
+            "thumbnail": "images/people-2-col-alt-dark.png",
             "data": {
                 "variant": "variant-c",
                 "colors": "colors-c"
