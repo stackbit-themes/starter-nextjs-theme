@@ -21,8 +21,8 @@
             },
             {
                 "type": "Link",
-                "label": "Blog",
-                "url": "/blog",
+                "label": "Faq",
+                "url": "/faq",
                 "altText": ""
             }
         ],
@@ -70,6 +70,12 @@
                 "type": "Link",
                 "label": "Careers",
                 "url": "/careers",
+                "altText": ""
+            },
+            {
+                "type": "Link",
+                "label": "FAQ",
+                "url": "/faq",
                 "altText": ""
             },
             {

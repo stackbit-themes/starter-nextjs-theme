@@ -3,7 +3,7 @@ title: Careers
 layout: PageLayout
 sections:
   - elementId: ''
-    colors: colors-c
+    colors: colors-f
     title: We’re growing fast
     subtitle: You should join us.
     feature:
@@ -28,24 +28,11 @@ sections:
         justifyContent: center
         flexDirection: col
       title:
-        fontWeight: '700'
-        fontStyle: normal
         textAlign: center
-        margin:
-          - mt-0
-          - mb-8
       subtitle:
-        fontWeight: 400
-        fontStyle: normal
         textAlign: center
-        margin:
-          - mt-0
-          - mb-8
       text:
         textAlign: left
-        margin:
-          - mt-0
-          - mb-8
       actions:
         justifyContent: flex-start
     type: HeroSection
@@ -73,12 +60,8 @@ sections:
       quote:
         textAlign: center
       name:
-        fontWeight: 400
-        fontStyle: normal
         textAlign: center
       title:
-        fontWeight: 400
-        fontStyle: normal
         textAlign: center
     type: QuoteSection
   - elementId: ''
@@ -101,80 +84,117 @@ sections:
           - pr-4
         justifyContent: center
       title:
-        fontWeight: 700
-        fontStyle: normal
         textAlign: center
-        margin:
-          - mt-0
-          - mb-2
       subtitle:
-        fontWeight: 400
-        fontStyle: normal
         textAlign: center
-        margin:
-          - mt-0
-          - mb-8
       text:
         textAlign: center
     type: TextSection
-  - elementId: ''
-    colors: colors-a
+  - colors: colors-a
+    elementId: ''
     title: Convinced? check out these open roles
-    text: >+
-      ### Product
+    items:
+      - type: ItemBlock
+        title: Product
+        text: >
+          Director of product managment
 
 
-      Director of product management
+          **San Francisco**
 
 
-      **San Francisco**
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+        actions:
+          - label: Apply
+            altText: Apply
+            url: /
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: link
+            elementId: ''
+            type: Link
+      - type: ItemBlock
+        title: Engineering
+        text: >
+          Head of eng
 
 
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and
+          **San Francisco**
 
 
-      [Apply](https://www.stackbit.com/)
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+        actions:
+          - label: Apply
+            altText: Apply
+            url: /
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: link
+            elementId: ''
+            type: Link
+      - type: ItemBlock
+        title: Product
+        text: >
+          Director of product managment
 
 
+          **San Francisco**
 
 
-      ### Product
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+        actions:
+          - label: Apply
+            altText: Apply
+            url: /
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: link
+            elementId: ''
+            type: Link
+      - type: ItemBlock
+        title: Product
+        text: >
+          Director of product managment
 
 
-      Director of product management
+          **San Francisco**
 
 
-      **San Francisco**
-
-
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and
-
-
-      [Apply](https://www.stackbit.com/)
-
-
-
-
-      ### Product
-
-
-      Director of product management
-
-
-      **San Francisco**
-
-
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and
-
-
-      [Apply](https://www.stackbit.com/)
-
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+        actions:
+          - label: Apply
+            altText: Apply
+            url: /
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: link
+            elementId: ''
+            type: Link
+    columns: 1
     styles:
       self:
         height: auto
@@ -185,28 +205,22 @@ sections:
           - ml-0
           - mr-0
         padding:
-          - pt-12
-          - pb-12
+          - pt-28
+          - pb-28
           - pl-4
           - pr-4
         justifyContent: center
+        borderRadius: none
+        borderWidth: 0
+        borderStyle: none
+        borderColor: border-dark
       title:
-        fontWeight: 700
-        fontStyle: normal
         textAlign: center
-        margin:
-          - mt-0
-          - mb-24
       subtitle:
-        fontWeight: 400
-        fontStyle: normal
         textAlign: center
-        margin:
-          - mt-24
-          - mb-8
-      text:
-        textAlign: left
-    type: TextSection
+      actions:
+        justifyContent: flex-start
+    type: FeaturedItemsSection
   - elementId: contact-form
     colors: colors-f
     title: Not seeing the right role? Contact us
@@ -250,19 +264,16 @@ sections:
           - ml-0
           - mr-0
         padding:
-          - pt-36
-          - pb-36
+          - pt-12
+          - pb-12
           - pl-4
           - pr-4
         alignItems: center
         justifyContent: center
         flexDirection: row
       title:
-        fontWeight: 700
-        fontStyle: normal
         textAlign: left
       text:
         textAlign: left
-    action: /.netlify/functions/submission_created
     type: ContactSection
 ---

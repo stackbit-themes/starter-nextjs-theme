@@ -2,22 +2,22 @@
     "type": "ThemeStyle",
     "fontHeadlines": "sans",
     "h1": {
-        "size": "5xl",
-        "weight": "bold",
+        "size": "7xl",
+        "weight": "normal",
         "decoration": "none",
         "case": "none",
         "letterSpacing": "normal"
     },
     "h2": {
-        "size": "5xl",
-        "weight": "bold",
+        "size": "6xl",
+        "weight": "normal",
         "decoration": "none",
         "case": "none",
         "letterSpacing": "normal"
     },
     "h3": {
         "size": "3xl",
-        "weight": "bold",
+        "weight": "normal",
         "decoration": "none",
         "case": "none",
         "letterSpacing": "normal"
@@ -51,9 +51,9 @@
     "onDark": "#ffffff",
     "primary": "#344ff1",
     "onPrimary": "#ffffff",
-    "secondary": "#f6f1ed",
-    "onSecondary": "#000000",
-    "complementary": "#faf0b4",
+    "secondary": "#101637",
+    "onSecondary": "#ffffff",
+    "complementary": "#f6f1ed",
     "onComplementary": "#000000",
     "complementaryAlt": "#edf2f6",
     "onComplementaryAlt": "#000000",

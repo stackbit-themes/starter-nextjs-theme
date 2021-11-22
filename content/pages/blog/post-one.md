@@ -44,12 +44,7 @@ bottomSections:
         borderStyle: none
         borderColor: border-dark
       title:
-        fontWeight: '700'
-        fontStyle: normal
         textAlign: left
-        margin:
-          - mt-0
-          - mb-4
       text:
         textAlign: left
       actions:
