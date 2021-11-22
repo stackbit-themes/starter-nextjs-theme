@@ -154,6 +154,7 @@ sections:
         textAlign: center
       subtitle:
         textAlign: center
+    imageSizePx: 240
     type: MediaGallerySection
   - colors: colors-h
     elementId: ''
