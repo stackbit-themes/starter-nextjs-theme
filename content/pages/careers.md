@@ -254,6 +254,9 @@ sections:
           label: Sign me up to receive updates
           width: full
       submitLabel: Send Message
+      styles:
+        submitLabel:
+          textAlign: center
     styles:
       self:
         height: auto

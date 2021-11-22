@@ -7,7 +7,7 @@
     "bio": "This feature is the thing you were missing in your workflow, thank god we have it for you to use.",
     "image": {
         "type": "ImageBlock",
-        "url": "/images/dianne-ameter.jpg",
+        "url": "https://assets.stackbit.com/components/images/default/default-person.png",
         "altText": "Person photo"
     }
 }
