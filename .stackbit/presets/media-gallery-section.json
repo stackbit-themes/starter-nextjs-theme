@@ -3,7 +3,7 @@
     "presets": [
         {
             "label": "4 columns light",
-            "thumbnail": "images/items-4-col-light.png",
+            "thumbnail": "images/gallery-4-col-light.png",
             "data": {
                 "colors": "colors-a",
                 "columns": 4
@@ -11,7 +11,7 @@
         },
         {
             "label": "2 columns light",
-            "thumbnail": "images/items-2-col-light.png",
+            "thumbnail": "images/gallery-2-col-light.png",
             "data": {
                 "colors": "colors-a",
                 "columns": 2
@@ -19,7 +19,7 @@
         },
         {
             "label": "4 columns dark",
-            "thumbnail": "images/items-4-col-dark.png",
+            "thumbnail": "images/gallery-4-col-dark.png",
             "data": {
                 "colors": "colors-c",
                 "columns": 4
@@ -27,7 +27,7 @@
         },
         {
             "label": "2 columns dark",
-            "thumbnail": "images/items-2-col-dark.png",
+            "thumbnail": "images/gallery-2-col-dark.png",
             "data": {
                 "colors": "colors-c",
                 "columns": 2
