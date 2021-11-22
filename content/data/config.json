@@ -1,8 +1,8 @@
 {
     "type": "Config",
     "header": {
-        "headerVariant": "variant-b",
-        "primaryColors": "colors-f",
+        "headerVariant": "variant-c",
+        "primaryColors": "colors-a",
         "secondaryColors": "colors-f",
         "title": "Startup.io",
         "isTitleVisible": true,
@@ -11,6 +11,12 @@
                 "type": "Link",
                 "label": "Home",
                 "url": "/",
+                "altText": ""
+            },
+            {
+                "type": "Link",
+                "label": "Careers",
+                "url": "/careers",
                 "altText": ""
             },
             {
@@ -43,10 +49,6 @@
     },
     "footer": {
         "colors": "colors-c",
-        "logo": {
-            "type": "ImageBlock",
-            "altText": "Logo"
-        },
         "title": "Startup.io",
         "contacts": {
             "phoneNumber": "850-123-5021",
@@ -62,6 +64,12 @@
                 "type": "Link",
                 "label": "Home",
                 "url": "/",
+                "altText": ""
+            },
+            {
+                "type": "Link",
+                "label": "Careers",
+                "url": "/careers",
                 "altText": ""
             },
             {
