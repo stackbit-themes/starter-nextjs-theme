@@ -1,0 +1,15 @@
+{
+    "model": "PostFeedSection",
+    "presets": [
+        {
+            "label": "3 columns light",
+            "thumbnail": "images/post-feed-3-light.png",
+            "data": {
+                "variant": "variant-a",
+                "colors": "colors-a",
+                "showRecent": true,
+                "recentCount": 3
+            }
+        }
+    ]
+}
