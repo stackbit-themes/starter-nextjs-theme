@@ -130,7 +130,7 @@ sections:
         caption: Caption of the image
     spacing: 3
     columns: 7
-    aspectRatio: '1:1'
+    aspectRatio: 'auto'
     showCaption: false
     enableHover: false
     styles:
