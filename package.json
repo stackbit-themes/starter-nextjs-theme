@@ -16,7 +16,7 @@
     },
     "dependencies": {
         "@stackbit/cli": "^0.1.14",
-        "@stackbit/components": "^0.1.49",
+        "@stackbit/components": "^0.1.51",
         "axios": "^0.18.0",
         "classnames": "^2.3.1",
         "jose": "^3.14.3",
