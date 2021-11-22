@@ -21,7 +21,7 @@
             "label": "4 columns dark",
             "thumbnail": "images/items-4-col-dark.png",
             "data": {
-                "colors": "colors-a",
+                "colors": "colors-c",
                 "columns": 4
             }
         },
@@ -29,7 +29,7 @@
             "label": "2 columns dark",
             "thumbnail": "images/items-2-col-dark.png",
             "data": {
-                "colors": "colors-a",
+                "colors": "colors-c",
                 "columns": 2
             }
         }
