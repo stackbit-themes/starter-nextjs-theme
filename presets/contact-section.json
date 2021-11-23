@@ -1,0 +1,169 @@
+{
+    "model": "ContactSection",
+    "presets": [
+        {
+            "label": "Contact us light - With image (right)",
+            "thumbnail": "images/contact-light-image-r.png",
+            "data": {
+                "title": "Contact us",
+                "text": "We look forward to hearing from you.",
+                "colors": "colors-a",
+                "elementId": "contact-form",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Contact us light - With image (left)",
+            "thumbnail": "images/contact-light-image-l.png",
+            "data": {
+                "title": "Contact us",
+                "text": "We look forward to hearing from you.",
+                "colors": "colors-a",
+                "elementId": "contact-form",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row-reverse"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Contact us light - No image",
+            "thumbnail": "images/contact-light-no-image.png",
+            "data": {
+                "title": "Contact us",
+                "text": "We look forward to hearing from you.",
+                "colors": "colors-a",
+                "feature": null,
+                "elementId": "contact-form",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row-reverse"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Contact us dark - With image (right)",
+            "thumbnail": "images/contact-dark-image-r.png",
+            "data": {
+                "title": "Contact us",
+                "text": "We look forward to hearing from you.",
+                "colors": "colors-c",
+                "elementId": "contact-form",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Contact us dark - With image (left)",
+            "thumbnail": "images/contact-dark-image-l.png",
+            "data": {
+                "title": "Contact us",
+                "text": "We look forward to hearing from you.",
+                "colors": "colors-c",
+                "elementId": "contact-form",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row-reverse"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Contact us dark - No image",
+            "thumbnail": "images/contact-dark-no-image.png",
+            "data": {
+                "title": "Contact us",
+                "text": "We look forward to hearing from you.",
+                "colors": "colors-c",
+                "feature": null,
+                "elementId": "contact-form",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    }
+                }
+            }
+        }
+    ]
+}

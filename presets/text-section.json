@@ -1,0 +1,25 @@
+{
+    "model": "TextSection",
+    "presets": [{
+            "label": "Dark",
+            "thumbnail": "images/text-section-dark.png",
+            "data": {
+                "colors": "colors-c"
+            }
+        },
+        {
+            "label": "Light",
+            "thumbnail": "images/text-section-light.png",
+            "data": {
+                "colors": "colors-a"
+            }
+        },
+        {
+            "label": "Complementary",
+            "thumbnail": "images/text-section-complementary.png",
+            "data": {
+                "colors": "colors-h"
+            }
+        }
+    ]
+}

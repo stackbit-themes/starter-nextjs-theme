@@ -1,0 +1,141 @@
+{
+    "model": "QuoteSection",
+    "presets": [
+        {
+            "label": "Quote light - with bg image, text left",
+            "thumbnail": "images/quote-light-left.png",
+            "data": {
+                "colors": "colors-a",
+                "backgroundImage": {
+                    "url": "https://assets.stackbit.com/components/images/default/bg.jpg",
+                    "altText": "Product Marketing Manager Quote",
+                    "styles": {
+                        "self": {
+                            "opacity": 100
+                        }
+                    }
+                },
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "flex-start"
+                    },
+                    "quote": {
+                        "textAlign": "left"
+                    },
+                    "name": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    },
+                    "title": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Quote light - no bg image, text center",
+            "thumbnail": "images/quote-light-center.png",
+            "data": {
+                "colors": "colors-a",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "center"
+                    },
+                    "quote": {
+                        "textAlign": "center"
+                    },
+                    "name": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "center"
+                    },
+                    "title": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "center"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Quote dark - with bg image, text left",
+            "thumbnail": "images/quote-dark-left.png",
+            "data": {
+                "colors": "colors-c",
+                "backgroundImage": {
+                    "url": "https://assets.stackbit.com/components/images/default/bg.jpg",
+                    "altText": "Product Marketing Manager Quote",
+                    "styles": {
+                        "self": {
+                            "opacity": 50
+                        }
+                    }
+                },
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "flex-start"
+                    },
+                    "quote": {
+                        "textAlign": "left"
+                    },
+                    "name": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    },
+                    "title": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Quote dark - no bg image, text center",
+            "thumbnail": "images/quote-dark-center.png",
+            "data": {
+                "colors": "colors-c",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "center"
+                    },
+                    "quote": {
+                        "textAlign": "center"
+                    },
+                    "name": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "center"
+                    },
+                    "title": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "center"
+                    }
+                }
+            }
+        }
+    ]
+}

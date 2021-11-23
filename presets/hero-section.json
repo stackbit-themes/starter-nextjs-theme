@@ -1,0 +1,128 @@
+{
+    "model": "HeroSection",
+    "presets": [{
+            "label": "Image right",
+            "thumbnail": "images/hero-right.png",
+            "data": {
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "subtitle": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    },
+                    "actions": {
+                        "justifyContent": "flex-start"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Image left",
+            "thumbnail": "images/hero-left.png",
+            "data": {
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "row-reverse"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "subtitle": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    },
+                    "actions": {
+                        "justifyContent": "flex-start"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Image top",
+            "thumbnail": "images/hero-top.png",
+            "data": {
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "col-reverse"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "subtitle": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    },
+                    "actions": {
+                        "justifyContent": "flex-start"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Image bottom",
+            "thumbnail": "images/hero-bottom.png",
+            "data": {
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "flexDirection": "col"
+                    },
+                    "title": {
+                        "textAlign": "left"
+                    },
+                    "subtitle": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "left"
+                    },
+                    "text": {
+                        "textAlign": "left"
+                    },
+                    "actions": {
+                        "justifyContent": "flex-start"
+                    }
+                }
+            }
+        }
+    ]
+}
