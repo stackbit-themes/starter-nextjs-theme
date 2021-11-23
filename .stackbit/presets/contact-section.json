@@ -62,7 +62,7 @@
                 "title": "Contact us",
                 "text": "We look forward to hearing from you.",
                 "colors": "colors-a",
-                "feature": null,
+                "media": null,
                 "elementId": "contact-form",
                 "styles": {
                     "self": {
@@ -144,7 +144,7 @@
                 "title": "Contact us",
                 "text": "We look forward to hearing from you.",
                 "colors": "colors-c",
-                "feature": null,
+                "media": null,
                 "elementId": "contact-form",
                 "styles": {
                     "self": {

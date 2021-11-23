@@ -12,7 +12,7 @@
                         "colors": "colors-a",
                         "title": "This is A Big Hero Headline",
                         "text": "Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl. Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat itae interdum. Ut nec massa eget lorem blandit condimentum et at risus.",
-                        "feature": {
+                        "media": {
                             "type": "ImageBlock",
                             "url": "https://assets.stackbit.com/components/images/default/hero.png",
                             "altText": "Hero section image"
@@ -70,7 +70,7 @@
                         "type": "HeroSection",
                         "title": "Contact us",
                         "text": "Fill out the form below and we will get in touch within 1 business day. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                        "feature": {
+                        "media": {
                             "type": "FormBlock",
                             "action": "/.netlify/functions/submission_created",
                             "elementId": "contact-form",
@@ -141,7 +141,7 @@
                         "title": "About Us",
                         "subtitle": "Who We Are",
                         "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.",
-                        "feature": {
+                        "media": {
                             "type": "ImageBlock",
                             "url": "https://assets.stackbit.com/components/images/default/hero.png",
                             "altText": "About us"

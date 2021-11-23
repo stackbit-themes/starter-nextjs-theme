@@ -1,5 +1,5 @@
 {
-    "model": "PostFeedSection",
+    "model": "LatestPostsSection",
     "presets": [
         {
             "label": "3 columns light",
