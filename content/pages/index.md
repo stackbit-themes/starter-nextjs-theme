@@ -12,11 +12,11 @@ sections:
       mentored, help peers, get helped in return.
     actions:
       - type: Button
-        label: Sign Up
+        label: Sign up
         url: 'https://www.stackbit.com/'
         style: primary
         elementId: hero-main-button
-    feature:
+    media:
       type: ImageBlock
       url: /images/hero-1.png
       altText: Image alt text
@@ -67,10 +67,6 @@ sections:
         style: link
         showIcon: true
         icon: arrowRight
-    feature:
-      type: ImageBlock
-      url: /images/hero-3.jpg
-      altText: Hero section image
     styles:
       self:
         height: auto
@@ -97,37 +93,46 @@ sections:
       actions:
         justifyContent: flex-start
     type: HeroSection
+    media:
+      url: /images/hero-3.jpg
+      altText: Where did everyone go?
+      caption: Team meeting
+      elementId: ''
+      styles:
+        self:
+          opacity: 100
+      type: ImageBlock
   - colors: colors-h
     elementId: ''
     images:
       - type: ImageBlock
         url: /images/apple.svg
-        altText: image alt text
-        caption: image caption
+        altText: Apple
+        caption: Apple
       - type: ImageBlock
         url: /images/google-play.svg
-        altText: image alt text
-        caption: image caption
+        altText: Google Play
+        caption: Google Play
       - type: ImageBlock
         url: /images/playstation.svg
-        altText: image alt text
-        caption: image caption
+        altText: PlayStation
+        caption: PlayStation
       - type: ImageBlock
         url: /images/gatsby.svg
-        altText: image alt text
-        caption: image caption
+        altText: Gatsby
+        caption: Gatsby
       - type: ImageBlock
         url: /images/xbox.svg
-        altText: altText of the image
-        caption: Caption of the image
+        altText: Xbox
+        caption: Xbox
       - type: ImageBlock
         url: /images/skype.svg
-        altText: altText of the image
-        caption: Caption of the image
+        altText: Skype
+        caption: Skype
       - type: ImageBlock
         url: /images/zcool.svg
-        altText: altText of the image
-        caption: Caption of the image
+        altText: ZCOOL
+        caption: ZCOOL
     spacing: 3
     columns: 7
     aspectRatio: 'auto'
@@ -163,7 +168,7 @@ sections:
       These are all excellent features that will provide exactly the things
       you’re looking for.
     items:
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Faster
         text: >
           Learn how top tech companies have learned working remote using our
@@ -182,7 +187,7 @@ sections:
             textAlign: center
           text:
             textAlign: center
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Smarter
         text: >
           Learn how top tech companies have learned working remote using our
@@ -201,7 +206,7 @@ sections:
             textAlign: center
           text:
             textAlign: center
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Focused
         text: >
           Learn how top tech companies have learned working remote using our
@@ -253,7 +258,7 @@ sections:
     text: >
       Share WIP, comment on each other’s work, approve what’s ready to go, ship
       together
-    feature:
+    media:
       type: ImageBlock
       url: /images/Image-on-the-right.svg
       altText: Hero section image
@@ -290,7 +295,7 @@ sections:
     text: >
       Share WIP, comment on each other’s work, approve what’s ready to go, ship
       together
-    feature:
+    media:
       type: ImageBlock
       url: /images/Image-on-the-left.svg
       altText: Hero section image
@@ -388,55 +393,36 @@ sections:
     elementId: ''
     title: Need Answers?
     items:
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-    columns: 2
+      - question: How it this different from what we have today?
+        answer: >-
+          At the office, working together is often a distruction, on remote, it
+          could be motivation, At the office, working together is often a
+          distruction, on remote, it could be motivation, At the office, working
+          together is often a distruction, on remote, it could be motivation
+      - question: How it this different from what we have today?
+        answer: >-
+          At the office, working together is often a distruction, on remote, it
+          could be motivation, At the office, working together is often a
+          distruction, on remote, it could be motivation, At the office, working
+          together is often a distruction, on remote, it could be motivation
+      - question: How it this different from what we have today?
+        answer: >-
+          At the office, working together is often a distruction, on remote, it
+          could be motivation, At the office, working together is often a
+          distruction, on remote, it could be motivation, At the office, working
+          together is often a distruction, on remote, it could be motivation
     styles:
       self:
         height: auto
-        width: wide
+        width: narrow
         margin:
           - mt-0
           - mb-0
           - ml-0
           - mr-0
         padding:
-          - pt-28
-          - pb-28
+          - pt-12
+          - pb-12
           - pl-4
           - pr-4
         justifyContent: center
@@ -445,12 +431,12 @@ sections:
         borderStyle: none
         borderColor: border-dark
       title:
-        textAlign: center
+        textAlign: left
       subtitle:
+        fontWeight: '400'
+        fontStyle: normal
         textAlign: center
-      actions:
-        justifyContent: flex-start
-    type: FeaturedItemsSection
+    type: FaqSection
   - elementId: ''
     colors: colors-a
     testimonials:

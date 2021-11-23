@@ -78,7 +78,7 @@ const pagePropsResolvers = [
             return;
         }
         const key = keyPath[keyPath.length - 1];
-        if (key !== 'type' || value !== 'PostFeedSection') {
+        if (key !== 'type' || value !== 'LatestPostsSection') {
             return;
         }
         const section = objectStack[objectStack.length - 1];

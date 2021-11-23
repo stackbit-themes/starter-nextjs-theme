@@ -6,7 +6,7 @@ sections:
     colors: colors-f
     title: We’re growing fast
     subtitle: You should join us.
-    feature:
+    media:
       type: ImageBlock
       url: /images/hero-4.jpg
       altText: Hero section image
@@ -94,7 +94,7 @@ sections:
     elementId: ''
     title: Convinced? check out these open roles
     items:
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Product
         text: >
           Director of product managment
@@ -119,7 +119,7 @@ sections:
             style: link
             elementId: ''
             type: Link
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Engineering
         text: >
           Head of eng
@@ -144,7 +144,7 @@ sections:
             style: link
             elementId: ''
             type: Link
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Product
         text: >
           Director of product managment
@@ -169,7 +169,7 @@ sections:
             style: link
             elementId: ''
             type: Link
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Product
         text: >
           Director of product managment

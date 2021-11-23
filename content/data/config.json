@@ -21,9 +21,15 @@
             },
             {
                 "type": "Link",
-                "label": "Faq",
+                "label": "FAQ",
                 "url": "/faq",
                 "altText": ""
+            },
+            {
+                "type": "Link",
+                "label": "Blog",
+                "altText": "Blog",
+                "url": "/blog"
             }
         ],
         "secondaryLinks": [
@@ -45,10 +51,34 @@
                     "pl-4"
                 ]
             }
+        },
+        "logo": {
+            "altText": "altText of the image",
+            "caption": "Caption of the image",
+            "elementId": "",
+            "styles": {
+                "self": {
+                    "opacity": 100
+                }
+            },
+            "type": "ImageBlock",
+            "url": "/favicon.svg"
         }
     },
     "footer": {
         "colors": "colors-c",
+        "logo": {
+            "altText": "altText of the image",
+            "caption": "Caption of the image",
+            "elementId": "",
+            "styles": {
+                "self": {
+                    "opacity": 100
+                }
+            },
+            "type": "ImageBlock",
+            "url": "/favicon.svg"
+        },
         "title": "Startup.io",
         "contacts": {
             "phoneNumber": "850-123-5021",
