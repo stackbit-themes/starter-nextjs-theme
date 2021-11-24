@@ -1,22 +1,27 @@
 {
     "model": "QuoteSection",
-    "presets": [{
-            "label": "With bg image, text left",
-            "thumbnail": "images/quote-image-bottom.png",
+    "presets": [
+        {
+            "label": "Quote light - with bg image, text left",
+            "thumbnail": "images/quote-light-left.png",
             "data": {
-                "colors": "colors-c",
+                "colors": "colors-a",
                 "backgroundImage": {
-                    "url": "/images/post-1.jpeg",
-                    "altText": "Product Marketing Manager Quote"
+                    "url": "https://assets.stackbit.com/components/images/default/bg.jpg",
+                    "altText": "Product Marketing Manager Quote",
+                    "styles": {
+                        "self": {
+                            "opacity": 100
+                        }
+                    }
                 },
                 "styles": {
                     "self": {
                         "height": "auto",
                         "width": "wide",
-                        "margin": ["mt-0", "mb-0"],
-                        "padding": ["pt-36", "pb-12"],
-                        "alignItems": "flex-start",
-                        "justifyContent": "center"
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "flex-start"
                     },
                     "quote": {
                         "textAlign": "left"
@@ -35,57 +40,56 @@
             }
         },
         {
-            "label": "With bg image, text rigth",
-            "thumbnail": "images/quote-image-top.png",
+            "label": "Quote light - no bg image, text center",
+            "thumbnail": "images/quote-light-center.png",
+            "data": {
+                "colors": "colors-a",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "wide",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "center"
+                    },
+                    "quote": {
+                        "textAlign": "center"
+                    },
+                    "name": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "center"
+                    },
+                    "title": {
+                        "fontWeight": 400,
+                        "fontStyle": "normal",
+                        "textAlign": "center"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Quote dark - with bg image, text left",
+            "thumbnail": "images/quote-dark-left.png",
             "data": {
                 "colors": "colors-c",
-                "contentAlignHoriz": "right",
-                "contentAlignVert": "top",
                 "backgroundImage": {
-                    "url": "/images/post-1.jpeg",
-                    "altText": "Product Marketing Manager Quote"
+                    "url": "https://assets.stackbit.com/components/images/default/bg.jpg",
+                    "altText": "Product Marketing Manager Quote",
+                    "styles": {
+                        "self": {
+                            "opacity": 50
+                        }
+                    }
                 },
                 "styles": {
                     "self": {
                         "height": "auto",
                         "width": "wide",
-                        "margin": ["mt-0", "mb-0"],
-                        "padding": ["pt-12", "pb-36"],
-                        "alignItems": "flex-end",
-                        "justifyContent": "center"
-                    },
-                    "quote": {
-                        "textAlign": "right"
-                    },
-                    "name": {
-                        "fontWeight": 400,
-                        "fontStyle": "normal",
-                        "textAlign": "right"
-                    },
-                    "title": {
-                        "fontWeight": 400,
-                        "fontStyle": "normal",
-                        "textAlign": "right"
-                    }
-                }
-            }
-        },
-        {
-            "label": "Without bg image text left",
-            "thumbnail": "images/quote-dark-bottom.png",
-            "data": {
-                "colors": "colors-c",
-                "contentAlignHoriz": "left",
-                "contentAlignVert": "bottom",
-                "backgroundImage": null,
-                "styles": {
-                    "self": {
-                        "height": "auto",
-                        "width": "wide",
-                        "margin": ["mt-0", "mb-0"],
-                        "padding": ["pt-36", "pb-12"],
-                        "alignItems": "flex-start",
-                        "justifyContent": "center"
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
+                        "justifyContent": "flex-start"
                     },
                     "quote": {
                         "textAlign": "left"
@@ -104,34 +108,31 @@
             }
         },
         {
-            "label": "Without bg imagem text right",
-            "thumbnail": "images/quote-dark-top.png",
+            "label": "Quote dark - no bg image, text center",
+            "thumbnail": "images/quote-dark-center.png",
             "data": {
                 "colors": "colors-c",
-                "contentAlignHoriz": "right",
-                "contentAlignVert": "top",
                 "backgroundImage": null,
                 "styles": {
                     "self": {
                         "height": "auto",
                         "width": "wide",
-                        "margin": ["mt-0", "mb-0"],
-                        "padding": ["pt-12", "pb-36"],
-                        "alignItems": "flex-end",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-36", "pb-36", "pl-4", "pr-4"],
                         "justifyContent": "center"
                     },
                     "quote": {
-                        "textAlign": "right"
+                        "textAlign": "center"
                     },
                     "name": {
                         "fontWeight": 400,
                         "fontStyle": "normal",
-                        "textAlign": "right"
+                        "textAlign": "center"
                     },
                     "title": {
                         "fontWeight": 400,
                         "fontStyle": "normal",
-                        "textAlign": "right"
+                        "textAlign": "center"
                     }
                 }
             }

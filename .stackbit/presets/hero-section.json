@@ -1,9 +1,12 @@
 {
     "model": "HeroSection",
-    "presets": [{
+    "presets": [
+        {
             "label": "Image right",
             "thumbnail": "images/hero-right.png",
             "data": {
+                "colors": "colors-a",
+                "backgroundImage": null,
                 "styles": {
                     "self": {
                         "height": "auto",
@@ -15,8 +18,6 @@
                         "flexDirection": "row"
                     },
                     "title": {
-                        "fontWeight": 700,
-                        "fontStyle": "normal",
                         "textAlign": "left"
                     },
                     "subtitle": {
@@ -37,6 +38,8 @@
             "label": "Image left",
             "thumbnail": "images/hero-left.png",
             "data": {
+                "colors": "colors-f",
+                "backgroundImage": null,
                 "styles": {
                     "self": {
                         "height": "auto",
@@ -48,8 +51,6 @@
                         "flexDirection": "row-reverse"
                     },
                     "title": {
-                        "fontWeight": 700,
-                        "fontStyle": "normal",
                         "textAlign": "left"
                     },
                     "subtitle": {
@@ -70,6 +71,8 @@
             "label": "Image top",
             "thumbnail": "images/hero-top.png",
             "data": {
+                "colors": "colors-h",
+                "backgroundImage": null,
                 "styles": {
                     "self": {
                         "height": "auto",
@@ -81,41 +84,6 @@
                         "flexDirection": "col-reverse"
                     },
                     "title": {
-                        "fontWeight": 700,
-                        "fontStyle": "normal",
-                        "textAlign": "left"
-                    },
-                    "subtitle": {
-                        "fontWeight": 400,
-                        "fontStyle": "normal",
-                        "textAlign": "left"
-                    },
-                    "text": {
-                        "textAlign": "left"
-                    },
-                    "actions": {
-                        "justifyContent": "flex-start"
-                    }
-                }
-            }
-        },
-        {
-            "label": "Image bottom",
-            "thumbnail": "images/hero-bottom.png",
-            "data": {
-                "styles": {
-                    "self": {
-                        "height": "auto",
-                        "width": "wide",
-                        "margin": ["mt-0", "mb-0"],
-                        "padding": ["pt-12", "pb-12"],
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                        "flexDirection": "col"
-                    },
-                    "title": {
-                        "fontWeight": 700,
-                        "fontStyle": "normal",
                         "textAlign": "left"
                     },
                     "subtitle": {

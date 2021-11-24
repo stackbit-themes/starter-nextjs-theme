@@ -1,0 +1,45 @@
+{
+    "model": "LatestPostsSection",
+    "presets": [
+        {
+            "label": "3 columns light",
+            "thumbnail": "images/post-feed-3-light.png",
+            "data": {
+                "variant": "variant-a",
+                "colors": "colors-a",
+                "showRecent": true,
+                "recentCount": 3
+            }
+        },
+        {
+            "label": "List light",
+            "thumbnail": "images/post-feed-list-light.png",
+            "data": {
+                "variant": "variant-b",
+                "colors": "colors-a",
+                "showRecent": true,
+                "recentCount": 3
+            }
+        },
+        {
+            "label": "3 columns dark",
+            "thumbnail": "images/post-feed-3-dark.png",
+            "data": {
+                "variant": "variant-a",
+                "colors": "colors-c",
+                "showRecent": true,
+                "recentCount": 3
+            }
+        },
+        {
+            "label": "List dark",
+            "thumbnail": "images/post-feed-list-dark.png",
+            "data": {
+                "variant": "variant-b",
+                "colors": "colors-c",
+                "showRecent": true,
+                "recentCount": 3
+            }
+        }
+    ]
+}

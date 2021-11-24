@@ -168,7 +168,7 @@ sections:
       These are all excellent features that will provide exactly the things
       you’re looking for.
     items:
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Faster
         text: >
           Learn how top tech companies have learned working remote using our
@@ -187,7 +187,7 @@ sections:
             textAlign: center
           text:
             textAlign: center
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Smarter
         text: >
           Learn how top tech companies have learned working remote using our
@@ -206,7 +206,7 @@ sections:
             textAlign: center
           text:
             textAlign: center
-      - type: ItemBlock
+      - type: FeaturedItem
         title: Focused
         text: >
           Learn how top tech companies have learned working remote using our
@@ -393,55 +393,36 @@ sections:
     elementId: ''
     title: Need Answers?
     items:
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-      - type: ItemBlock
-        title: How it this different from what we have today?
-        text: >
-          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
-        styles:
-          title:
-            textAlign: left
-          text:
-            textAlign: left
-    columns: 2
+      - question: How it this different from what we have today?
+        answer: >-
+          At the office, working together is often a distruction, on remote, it
+          could be motivation, At the office, working together is often a
+          distruction, on remote, it could be motivation, At the office, working
+          together is often a distruction, on remote, it could be motivation
+      - question: How it this different from what we have today?
+        answer: >-
+          At the office, working together is often a distruction, on remote, it
+          could be motivation, At the office, working together is often a
+          distruction, on remote, it could be motivation, At the office, working
+          together is often a distruction, on remote, it could be motivation
+      - question: How it this different from what we have today?
+        answer: >-
+          At the office, working together is often a distruction, on remote, it
+          could be motivation, At the office, working together is often a
+          distruction, on remote, it could be motivation, At the office, working
+          together is often a distruction, on remote, it could be motivation
     styles:
       self:
         height: auto
-        width: wide
+        width: narrow
         margin:
           - mt-0
           - mb-0
           - ml-0
           - mr-0
         padding:
-          - pt-28
-          - pb-28
+          - pt-12
+          - pb-12
           - pl-4
           - pr-4
         justifyContent: center
@@ -450,12 +431,12 @@ sections:
         borderStyle: none
         borderColor: border-dark
       title:
-        textAlign: center
+        textAlign: left
       subtitle:
+        fontWeight: '400'
+        fontStyle: normal
         textAlign: center
-      actions:
-        justifyContent: flex-start
-    type: FeaturedItemsSection
+    type: FaqSection
   - elementId: ''
     colors: colors-a
     testimonials:

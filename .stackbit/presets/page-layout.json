@@ -1,9 +1,66 @@
 {
     "model": "PageLayout",
-    "presets": [{
+    "presets": [
+        {
             "label": "Landing",
-            "thumbnail": "images/page-landing.png"
-        }, {
+            "thumbnail": "images/page-landing.png",
+            "data": {
+                "title": "Home",
+                "sections": [
+                    {
+                        "type": "HeroSection",
+                        "colors": "colors-a",
+                        "title": "This is A Big Hero Headline",
+                        "text": "Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl. Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat itae interdum. Ut nec massa eget lorem blandit condimentum et at risus.",
+                        "media": {
+                            "type": "ImageBlock",
+                            "url": "https://assets.stackbit.com/components/images/default/hero.png",
+                            "altText": "Hero section image"
+                        },
+                        "actions": [
+                            {
+                                "type": "Button",
+                                "label": "Get Started",
+                                "url": "/",
+                                "style": "primary"
+                            },
+                            {
+                                "type": "Button",
+                                "label": "Learn More",
+                                "url": "/",
+                                "style": "secondary"
+                            }
+                        ],
+                        "styles": {
+                            "self": {
+                                "height": "auto",
+                                "width": "wide",
+                                "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                                "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                                "alignItems": "center",
+                                "justifyContent": "center",
+                                "flexDirection": "row"
+                            },
+                            "title": {
+                                "textAlign": "left"
+                            },
+                            "subtitle": {
+                                "fontWeight": 400,
+                                "fontStyle": "normal",
+                                "textAlign": "left"
+                            },
+                            "text": {
+                                "textAlign": "left"
+                            },
+                            "actions": {
+                                "justifyContent": "flex-start"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
             "label": "Contact",
             "thumbnail": "images/page-contact.png",
             "data": {
@@ -13,7 +70,7 @@
                         "type": "HeroSection",
                         "title": "Contact us",
                         "text": "Fill out the form below and we will get in touch within 1 business day. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                        "feature": {
+                        "media": {
                             "type": "FormBlock",
                             "action": "/.netlify/functions/submission_created",
                             "elementId": "contact-form",
@@ -48,15 +105,13 @@
                             "self": {
                                 "height": "auto",
                                 "width": "wide",
-                                "margin": ["mt-0", "mb-0"],
-                                "padding": ["pt-12", "pb-12"],
-                                "alignItems": "center",
+                                "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                                "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                                "alignItems": "flex-start",
                                 "justifyContent": "center",
                                 "flexDirection": "row"
                             },
                             "title": {
-                                "fontWeight": 700,
-                                "fontStyle": "normal",
                                 "textAlign": "left"
                             },
                             "subtitle": {
@@ -86,24 +141,22 @@
                         "title": "About Us",
                         "subtitle": "Who We Are",
                         "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.",
-                        "feature": {
+                        "media": {
                             "type": "ImageBlock",
-                            "url": "/images/about.jpg",
+                            "url": "https://assets.stackbit.com/components/images/default/hero.png",
                             "altText": "About us"
                         },
                         "styles": {
                             "self": {
                                 "height": "auto",
                                 "width": "wide",
-                                "margin": ["mt-0", "mb-0"],
-                                "padding": ["pt-12", "pb-12"],
+                                "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                                "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
                                 "alignItems": "center",
                                 "justifyContent": "center",
                                 "flexDirection": "row"
                             },
                             "title": {
-                                "fontWeight": 700,
-                                "fontStyle": "normal",
                                 "textAlign": "left"
                             },
                             "subtitle": {
@@ -136,15 +189,13 @@
                             "self": {
                                 "height": "auto",
                                 "width": "wide",
-                                "margin": ["mt-0", "mb-0"],
-                                "padding": ["pt-12", "pb-12"],
+                                "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                                "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
                                 "alignItems": "center",
                                 "justifyContent": "center",
                                 "flexDirection": "row"
                             },
                             "title": {
-                                "fontWeight": 700,
-                                "fontStyle": "normal",
                                 "textAlign": "left"
                             },
                             "text": {
