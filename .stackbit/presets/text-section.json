@@ -1,25 +1,27 @@
 {
     "model": "TextSection",
-    "presets": [{
+    "presets": [
+        {
             "label": "Light",
             "thumbnail": "images/text-section-light.png",
             "data": {
-                "colors": "colors-a"
-            },
-            "subtitle": "",
-            "styles": {
-                "self": {
-                    "height": "auto",
-                    "width": "narrow",
-                    "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
-                    "padding": ["pt-24", "pb-24", "pl-4", "pr-4"]
-                },
-                "title": {
-                    "textAlign": "center"
-                },
-                "text": {
-                    "textAlign": "center"
-                }
+                "colors": "colors-a",
+                "subtitle": "",
+                "styles": {
+                    "self": {
+                        "height": "auto",
+                        "width": "narrow",
+                        "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
+                        "padding": ["pt-24", "pb-24", "pl-4", "pr-4"],
+                        "justifyContent": "center"
+                    },
+                    "title": {
+                        "textAlign": "center"
+                    },
+                    "text": {
+                        "textAlign": "center"
+                    }
+                 }
             }
         },
         {
