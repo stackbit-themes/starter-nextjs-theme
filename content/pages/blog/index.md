@@ -2,7 +2,7 @@
 title: Blog post page
 layout: PageLayout
 sections:
-  - type: LatestPostsSection
+  - type: PostFeedSection
     variant: variant-a
     colors: colors-a
     title: Blog

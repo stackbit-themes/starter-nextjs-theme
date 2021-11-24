@@ -12,7 +12,7 @@ featuredImage:
   altText: Post Image
 bottomSections:
   - type: CtaSection
-    colors: colors-f
+    colors: colors-e
     title: Let's do this
     text: >-
       The Stackbit theme is flexible and scalable to every need. It can manage

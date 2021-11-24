@@ -168,7 +168,7 @@ sections:
       These are all excellent features that will provide exactly the things
       you’re looking for.
     items:
-      - type: FeaturedItem
+      - type: ItemBlock
         title: Faster
         text: >
           Learn how top tech companies have learned working remote using our
@@ -187,7 +187,7 @@ sections:
             textAlign: center
           text:
             textAlign: center
-      - type: FeaturedItem
+      - type: ItemBlock
         title: Smarter
         text: >
           Learn how top tech companies have learned working remote using our
@@ -206,7 +206,7 @@ sections:
             textAlign: center
           text:
             textAlign: center
-      - type: FeaturedItem
+      - type: ItemBlock
         title: Focused
         text: >
           Learn how top tech companies have learned working remote using our
@@ -393,36 +393,55 @@ sections:
     elementId: ''
     title: Need Answers?
     items:
-      - question: How it this different from what we have today?
-        answer: >-
-          At the office, working together is often a distruction, on remote, it
-          could be motivation, At the office, working together is often a
-          distruction, on remote, it could be motivation, At the office, working
-          together is often a distruction, on remote, it could be motivation
-      - question: How it this different from what we have today?
-        answer: >-
-          At the office, working together is often a distruction, on remote, it
-          could be motivation, At the office, working together is often a
-          distruction, on remote, it could be motivation, At the office, working
-          together is often a distruction, on remote, it could be motivation
-      - question: How it this different from what we have today?
-        answer: >-
-          At the office, working together is often a distruction, on remote, it
-          could be motivation, At the office, working together is often a
-          distruction, on remote, it could be motivation, At the office, working
-          together is often a distruction, on remote, it could be motivation
+      - type: ItemBlock
+        title: How it this different from what we have today?
+        text: >
+          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+      - type: ItemBlock
+        title: How it this different from what we have today?
+        text: >
+          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+      - type: ItemBlock
+        title: How it this different from what we have today?
+        text: >
+          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+      - type: ItemBlock
+        title: How it this different from what we have today?
+        text: >
+          At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation, At the office, working together is often a distruction, on remote, it could be motivation
+        styles:
+          title:
+            textAlign: left
+          text:
+            textAlign: left
+    columns: 2
     styles:
       self:
         height: auto
-        width: narrow
+        width: wide
         margin:
           - mt-0
           - mb-0
           - ml-0
           - mr-0
         padding:
-          - pt-12
-          - pb-12
+          - pt-28
+          - pb-28
           - pl-4
           - pr-4
         justifyContent: center
@@ -431,12 +450,12 @@ sections:
         borderStyle: none
         borderColor: border-dark
       title:
-        textAlign: left
-      subtitle:
-        fontWeight: '400'
-        fontStyle: normal
         textAlign: center
-    type: FaqSection
+      subtitle:
+        textAlign: center
+      actions:
+        justifyContent: flex-start
+    type: FeaturedItemsSection
   - elementId: ''
     colors: colors-a
     testimonials:

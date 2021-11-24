@@ -2,9 +2,10 @@
 title: FAQ
 layout: PageLayout
 sections:
-  - colors: colors-a
+  - colors: colors-i
     elementId: ''
-    title: Need Answers?
+    title: Frequently Asked Questions
+    subtitle: The section subtitle
     items:
       - question: How it this different from what we have today?
         answer: >-
@@ -27,7 +28,7 @@ sections:
     styles:
       self:
         height: auto
-        width: narrow
+        width: wide
         margin:
           - mt-0
           - mb-0
@@ -44,11 +45,13 @@ sections:
         borderStyle: none
         borderColor: border-dark
       title:
-        textAlign: left
+        textAlign: center
       subtitle:
-        fontWeight: '400'
+        fontWeight: 400
         fontStyle: normal
         textAlign: center
+      actions:
+        justifyContent: center
     type: FaqSection
   - elementId: ''
     title: Recent posts
