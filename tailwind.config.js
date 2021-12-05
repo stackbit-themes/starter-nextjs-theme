@@ -4,7 +4,6 @@ const themeStyle = require('./content/data/style.json');
 module.exports = {
     mode: 'jit',
     purge: {
-        enabled: false,
         content: [
             './src/**/*.{js,ts,jsx,tsx}',
             './content/**/*'
