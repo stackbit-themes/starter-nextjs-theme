@@ -19,13 +19,7 @@
                             "altText": "Item image"
                         },
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -40,13 +34,7 @@
                             "altText": "Item image"
                         },
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -61,13 +49,7 @@
                             "altText": "Item image"
                         },
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -109,13 +91,7 @@
                         "text": "Learn how top tech companies have learned working remote using our product.",
                         "featuredImage": null,
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -126,13 +102,7 @@
                         "text": "Learn how top tech companies have learned working remote using our product.",
                         "featuredImage": null,
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -143,13 +113,7 @@
                         "text": "Learn how top tech companies have learned working remote using our product.",
                         "featuredImage": null,
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -191,13 +155,7 @@
                         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.",
                         "featuredImage": null,
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -208,13 +166,7 @@
                         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.",
                         "featuredImage": null,
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
@@ -225,13 +177,7 @@
                         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.",
                         "featuredImage": null,
                         "styles": {
-                            "title": {
-                                "textAlign": "center"
-                            },
-                            "subtitle": {
-                                "textAlign": "center"
-                            },
-                            "text": {
+                            "self": {
                                 "textAlign": "center"
                             }
                         }
