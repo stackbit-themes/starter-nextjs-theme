@@ -48,7 +48,7 @@ const iconMap = {
 };
 
 export default function Action(props) {
-    const { type, label, altText, url, showIcon } = props;
+    const { type, label, altText, url, showIcon, onClick } = props;
     const icon = props.icon || 'arrowLeft';
     const iconPosition = props.iconPosition || 'right';
     const IconComponent = iconMap[icon];
@@ -76,6 +76,7 @@ export default function Action(props) {
                 'sb-component-button-secondary': style === 'secondary'
             })}
             data-sb-field-path={annotations.join(' ').trim()}
+            onClick={onClick}
         >
             {label && <span>{label}</span>}
             {showIcon && IconComponent && (

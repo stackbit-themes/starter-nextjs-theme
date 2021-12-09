@@ -175,28 +175,34 @@ function MobileMenu(props) {
                 <span className="sr-only">Open Menu</span>
                 <MenuIcon className="fill-current h-6 w-6" />
             </button>
-            {isMenuOpen && (
-                <div className={classNames(secondaryColors, 'fixed', 'inset-0', 'px-4', 'sm:px-8', 'py-5', 'overflow-y-auto', 'z-10')}>
-                    <div className="flex flex-col min-h-full">
-                        <div className="flex items-center justify-between mb-10">
-                            {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
-                            <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={() => setIsMenuOpen(false)}>
-                                <CloseIcon className="fill-current h-6 w-6" />
-                            </button>
-                        </div>
-                        {primaryLinks.length > 0 && (
-                            <ul className="flex-grow mb-10 space-y-6" data-sb-field-path=".primaryLinks">
-                                {listOfLinks(primaryLinks, true)}
-                            </ul>
-                        )}
-                        {secondaryLinks.length > 0 && (
-                            <ul className="mb-10 space-y-5" data-sb-field-path=".secondaryLinks">
-                                {listOfLinks(secondaryLinks, true)}
-                            </ul>
-                        )}
+            <div className={classNames(secondaryColors, 'fixed', 'inset-0', 'px-4', 'sm:px-8', 'py-5', 'overflow-y-auto', 'z-20', isMenuOpen ? 'block' : 'hidden')}>
+                <div className="flex flex-col min-h-full">
+                    <div className="flex items-center justify-between mb-10">
+                        {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
+                        <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={() => setIsMenuOpen(false)}>
+                            <CloseIcon className="fill-current h-6 w-6" />
+                        </button>
                     </div>
+                    {primaryLinks.length > 0 && (
+                        <ul className="flex-grow mb-10 space-y-6" data-sb-field-path=".primaryLinks">
+                            {primaryLinks.map((link, index) => (
+                                <li key={index}>
+                                    <Action {...link} className={classNames(link.type === 'Button' ? 'w-full' : '')} data-sb-field-path={`.${index}`} onClick={() => setIsMenuOpen(false)} />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                    {secondaryLinks.length > 0 && (
+                        <ul className="mb-10 space-y-5" data-sb-field-path=".secondaryLinks">
+                            {secondaryLinks.map((link, index) => (
+                                <li key={index}>
+                                    <Action {...link} className={classNames(link.type === 'Button' ? 'w-full' : '')} data-sb-field-path={`.${index}`} onClick={() => setIsMenuOpen(false)} />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
-            )}
+            </div>
         </div>
     );
 }
@@ -211,15 +217,11 @@ function siteLogoLink(props) {
 }
 
 function listOfLinks(links, inMobileMenu = false) {
-    return links.map((link, index) => {
-        const defaultStyle = link.type === 'Link' ? 'link' : 'secondary';
-        const style = link.style || defaultStyle;
-        return (
-            <li key={index}>
-                <Action {...link} className={classNames(inMobileMenu && style !== 'link' ? 'w-full' : '')} data-sb-field-path={`.${index}`} />
-            </li>
-        );
-    });
+    return links.map((link, index) => (
+        <li key={index}>
+            <Action {...link} className={classNames(inMobileMenu && link.type === 'Button' ? 'w-full' : '')} data-sb-field-path={`.${index}`} />
+        </li>
+    ));
 }
 
 function mapMaxWidthStyles(width) {
