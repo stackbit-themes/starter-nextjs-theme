@@ -148,7 +148,7 @@ fields:
     styles:
       self:
         width: ['narrow', 'wide', 'full']
-        padding: ['tw4:36']
+        padding: ['tw0:36']
     default:
       self:
         width: narrow

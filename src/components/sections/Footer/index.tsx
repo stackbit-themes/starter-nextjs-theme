@@ -8,15 +8,16 @@ import ImageBlock from '../../molecules/ImageBlock';
 export default function Footer(props) {
     const colors = props.colors || 'colors-a';
     const footerStyles = props.styles?.self || {};
+    const footerWidth = footerStyles.width || 'narrow';
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
     const legalLinks = props.legalLinks || [];
     return (
         <footer
-            className={classNames('sb-component', 'sb-component-footer', colors, footerStyles.padding)}
+            className={classNames('sb-component', 'sb-component-footer', colors, footerStyles.padding || 'py-16 px-4')}
             data-sb-field-path={`${props.annotationPrefix}:footer`}
         >
-            <div className={classNames('mx-auto', footerStyles.width ? mapMaxWidthStyles(footerStyles.width) : null)}>
+            <div className={classNames('mx-auto', mapMaxWidthStyles(footerWidth))}>
                 {(props.logo || props.title || props.text) && (
                     <div className="mb-12">
                         <Link href="/" className="sb-footer-logo flex items-center" data-sb-field-path=".title#span[1] .logo#img[1]">
