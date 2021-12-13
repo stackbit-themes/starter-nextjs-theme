@@ -22,6 +22,7 @@ fields:
   - type: object
     name: h1
     label: H1
+    labelField: size
     group: text-styles
     readOnly: true
     fields:
@@ -111,6 +112,7 @@ fields:
   - type: object
     name: h2
     label: H2
+    labelField: size
     group: text-styles
     readOnly: true
     fields:
