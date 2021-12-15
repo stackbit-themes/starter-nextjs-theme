@@ -9,7 +9,6 @@ import ImageBlock from '../../molecules/ImageBlock';
 
 export default function FeaturedPeopleSection(props) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const colors = props.colors || 'colors-a';
     const styles = props.styles || {};
     const sectionWidth = styles.self?.width || 'wide';
@@ -23,7 +22,6 @@ export default function FeaturedPeopleSection(props) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-featured-people-section',
-                cssCustomClass,
                 colors,
                 'flex',
                 'flex-col',

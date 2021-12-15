@@ -35,7 +35,6 @@ type MediaGalleryStyle = {
 type BaseSectionComponentProps = {
     type: string;
     elementId: string;
-    customClass: string;
     colors?: string;
     styles?: BaseSectionStyle & MediaGalleryStyle;
 };
@@ -60,7 +59,6 @@ export type MediaGallerySectionProps = BaseSectionComponentProps & {
 
 export default function MediaGallerySection(props: MediaGallerySectionProps) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const colors = props.colors || 'colors-a';
     const sectionStyles = props.styles?.self;
     const sectionWidth = sectionStyles?.width || 'wide';
@@ -74,7 +72,6 @@ export default function MediaGallerySection(props: MediaGallerySectionProps) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-media-gallery-section',
-                cssCustomClass,
                 colors,
                 'flex',
                 'flex-col',

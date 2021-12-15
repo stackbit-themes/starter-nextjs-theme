@@ -10,7 +10,6 @@ import ChevronIcon from '../../svgs/chevron-right';
 
 export default function FaqSection(props) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const colors = props.colors || 'colors-a';
     const styles = props.styles || {};
     const sectionWidth = styles.self?.width || 'wide';
@@ -26,7 +25,6 @@ export default function FaqSection(props) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-faq-section',
-                cssCustomClass,
                 colors,
                 'flex',
                 'flex-col',

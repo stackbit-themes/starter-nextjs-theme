@@ -9,7 +9,6 @@ import { Action, Badge } from '../../atoms';
 
 export default function FeatureHighlightSection(props) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const colors = props.colors || 'colors-a';
     const bgSize = props.backgroundSize || 'full';
     const sectionStyles = props.styles?.self || {};
@@ -26,7 +25,6 @@ export default function FeatureHighlightSection(props) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-feature-highlight-section',
-                cssCustomClass,
                 bgSize === 'inset' ? 'flex': null,
                 bgSize === 'inset' ? mapStyles({ justifyContent: sectionJustifyContent }) : null,
                 sectionStyles.margin

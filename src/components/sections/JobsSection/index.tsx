@@ -8,7 +8,6 @@ import Action from '../../atoms/Action';
 
 export default function JobsSection(props) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const colors = props.colors || 'colors-a';
     const styles = props.styles || {};
     const sectionWidth = styles.self?.width || 'wide';
@@ -23,7 +22,6 @@ export default function JobsSection(props) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-jobs-section',
-                cssCustomClass,
                 colors,
                 'flex',
                 'flex-col',

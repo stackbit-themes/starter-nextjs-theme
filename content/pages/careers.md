@@ -173,7 +173,7 @@ sections:
           - mr-0
         padding:
           - pt-32
-          - pb-96
+          - pb-60
           - pl-4
           - pr-4
         justifyContent: center
@@ -187,7 +187,6 @@ sections:
         textAlign: center
     type: JobsSection
   - elementId: contact-form
-    customClass: 'overlap'
     colors: colors-f
     backgroundSize: inset
     title: Not seeing the right role? Contact us
@@ -235,13 +234,15 @@ sections:
         height: auto
         width: wide
         margin:
-          - mt-0
+          - mt-24
           - mb-0
           - ml-0
           - mr-0
         padding:
           - pt-24
           - pb-24
+          - pr-4
+          - pl-4
         alignItems: center
         justifyContent: center
         flexDirection: row

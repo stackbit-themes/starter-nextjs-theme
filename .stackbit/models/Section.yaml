@@ -61,9 +61,3 @@ fields:
     label: Element ID
     description: The unique ID for an HTML element, must not contain whitespace
     default: ''
-  - type: string
-    name: customClass
-    group: settings
-    label: Element custom class
-    description: A custom class for an HTML element, must not contain whitespace
-    default: ''

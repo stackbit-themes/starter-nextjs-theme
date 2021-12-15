@@ -8,7 +8,6 @@ import ImageBlock from '../../molecules/ImageBlock';
 
 export default function TestimonialsSection(props) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const variant = props.variant || 'variant-a';
     const colors = props.colors || 'colors-a';
     const styles = props.styles || {};
@@ -24,7 +23,6 @@ export default function TestimonialsSection(props) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-testimonials-section',
-                cssCustomClass,
                 colors,
                 'flex',
                 'flex-col',

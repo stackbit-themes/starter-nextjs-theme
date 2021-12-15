@@ -120,12 +120,12 @@ sections:
         width: wide
         margin:
           - mt-0
-          - mb-36
+          - mb-0
           - ml-0
           - mr-0
         padding:
           - pt-12
-          - pb-72
+          - pb-36
           - pl-4
           - pr-4
         justifyContent: center
@@ -146,7 +146,6 @@ sections:
         type: Link
         label: See all posts
   - type: ContactSection
-    customClass: 'overlap'
     colors: colors-f
     backgroundSize: inset
     title: Get early access
@@ -173,15 +172,15 @@ sections:
         height: auto
         width: wide
         margin:
-          - mt-0
+          - mt-24
           - mb-0
           - ml-0
           - mr-0
         padding:
-          - pt-12
-          - pb-12
-          - pl-4
+          - pt-24
+          - pb-24
           - pr-4
+          - pl-4
         alignItems: center
         justifyContent: center
         flexDirection: row

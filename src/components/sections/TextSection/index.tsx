@@ -7,7 +7,6 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 
 export default function TextSection(props) {
     const cssId = props.elementId || null;
-    const cssCustomClass = props.customClass || null;
     const colors = props.colors || 'colors-a';
     const sectionStyles = props.styles?.self || {};
     const sectionWidth = sectionStyles.width || 'wide';
@@ -21,7 +20,6 @@ export default function TextSection(props) {
                 'sb-component',
                 'sb-component-section',
                 'sb-component-text-section',
-                cssCustomClass,
                 colors,
                 'flex',
                 'flex-col',
