@@ -9,6 +9,11 @@ export default function VideoBlock(props) {
     const cssId = props.elementId || null;
     const cssClasses = props.className || null;
     const aspectRatio = props.aspectRatio || '16:9';
+    const annotationPrefix = props['data-sb-field-path'] || '';
+    const annotations = [
+        `${annotationPrefix}`,
+        `${annotationPrefix}.elementId#@id`
+    ];
     return (
         <div
             id={cssId}
@@ -26,7 +31,7 @@ export default function VideoBlock(props) {
                     'pt-9/16': aspectRatio === '16:9'
                 }
             )}
-            data-sb-field-path=".elementId#@id"
+            data-sb-field-path={annotations.join(' ').trim()}
         >
             {videoEmbed(props)}
         </div>
