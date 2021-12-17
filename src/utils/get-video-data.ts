@@ -1,5 +1,5 @@
 // Based on https://github.com/radiovisual/get-video-id
-export default function getVideoData(videoUrl) {
+export default function getVideoData(videoUrl: string) {
     let videoData = {
         id: null,
         service: null

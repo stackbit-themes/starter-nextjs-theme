@@ -37,7 +37,7 @@ function videoEmbed(props) {
     const { url, autoplay, loop, muted, controls = true } = props;
     const videoData = getVideoData(url);
     if (!videoData.id || !videoData.service) {
-        return <p>Video URL is not supported.</p>;
+        return <p className="absolute italic left-0 text-center top-1/2 transform -translate-y-1/2 w-full">Video URL is not supported.</p>;
     }
     if (videoData.service === 'custom') {
         return (
