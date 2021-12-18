@@ -2,6 +2,45 @@
     "model": "PageLayout",
     "presets": [
         {
+            "label":"Empty page",
+            "thumbnail":"images/page-empty.png",
+            "data":{
+                "title":"Empty page",
+                "sections": [
+                    {
+                        "type": "TextSection",
+                        "colors": "colors-a",
+                        "title": "This in an empty page",
+                        "subtitle": "Start adding sections by clicking the + button on the page or though the sidebar.",
+                        "styles": {
+                            "self": {
+                                "height": "auto",
+                                "width": "wide",
+                                "margin": ["mt-0", "mb-12", "ml-0", "mr-0"],
+                                "padding": ["pt-12", "pb-36", "pl-4", "pr-4"],
+                                "alignItems": "center",
+                                "justifyContent": "center",
+                                "flexDirection": "row"
+                            },
+                            "title": {
+                                "textAlign": "left"
+                            },
+                            "subtitle": {
+                                "textAlign": "left"
+                            },
+                            "text": {
+                                "textAlign": "left"
+                            },
+                            "actions": {
+                                "justifyContent": "flex-start"
+                            }
+                        }
+                    }
+                ]
+            }
+
+        },
+        {
             "label": "Landing",
             "thumbnail": "images/page-landing.png",
             "data": {
