@@ -14,7 +14,8 @@ export default function DefaultBaseLayout(props) {
             <div className="sb-base sb-default-base-layout">
                 <Head>
                     <title>{page.title}</title>
-                    <meta name="description" content="Stackbit Components Library" />
+                    <meta name="description" content="Stackbit Theme" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.svg" />
                 </Head>
                 {site.header && <Header {...site.header} annotationPrefix={siteMeta.id} />}

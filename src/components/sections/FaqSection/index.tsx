@@ -46,7 +46,7 @@ export default function FaqSection(props) {
                         {(props.title || props.subtitle || actions.length > 0) && (
                             <div className={classNames('w-full', { 'lg:w-1/3 lg:pr-3': faqItems.length > 0 })}>
                                 {props.title && (
-                                    <h2 className={classNames('break-words', styles.title ? mapStyles(styles.title) : null)} data-sb-field-path=".title">
+                                    <h2 className={classNames(styles.title ? mapStyles(styles.title) : null)} data-sb-field-path=".title">
                                         {props.title}
                                     </h2>
                                 )}
