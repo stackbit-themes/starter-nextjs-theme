@@ -4,6 +4,10 @@ label: Site configuration
 singleInstance: true
 readOnly: true
 fields:
+  - type: image
+    name: favicon
+    label: Favicon
+    default: ''
   - type: model
     name: header
     label: Header configuration
