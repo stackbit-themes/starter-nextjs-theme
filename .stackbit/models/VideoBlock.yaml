@@ -8,8 +8,8 @@ fieldGroups:
 fields:
   - type: string
     name: title
-    description: The value of field will be used for presentation purposes in Stackbit
-    default: 'Title of the video'
+    description: The value of the field is used for presentation purposes in Stackbit
+    default: Title of the video
   - type: string
     name: url
     label: Video URL (YouTube, Vimeo, .mp4)
