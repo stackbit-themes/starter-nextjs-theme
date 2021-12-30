@@ -193,6 +193,7 @@ sections:
     text: We might have more roles soon, and we’ll contact you if we think there might be a good match
     form:
       type: FormBlock
+      variant: variant-a
       elementId: contact-form
       action: /.netlify/functions/submission_created
       destination: ''

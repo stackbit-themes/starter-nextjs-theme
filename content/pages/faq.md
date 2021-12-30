@@ -154,6 +154,7 @@ sections:
       increae your team’s productivity
     form:
       type: FormBlock
+      variant: variant-b
       elementId: contact-form
       destination: ''
       action: /.netlify/functions/submission_created

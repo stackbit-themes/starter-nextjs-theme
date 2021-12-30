@@ -177,16 +177,25 @@
     }
 
     /* Form controls */
-    .sb-form-control {
-        @apply mb-4;
-    }
     .sb-label {
         @apply inline-block mb-1;
     }
     .sb-input,
     .sb-select,
     .sb-textarea {
-        @apply bg-transparent border border-current p-3 w-full focus:outline-none;
+        @apply bg-transparent border border-current px-3 w-full focus:outline-none;
+    }
+    .sb-input,
+    .sb-select {
+        @apply py-0;
+        height: 3.125rem;
+    }
+    .sb-textarea {
+        @apply py-3;
+    }
+    .sb-component-form-block .sb-component-button {
+        @apply px-8 py-0;
+        height: 3.125rem;
     }
     option {
         color: initial;

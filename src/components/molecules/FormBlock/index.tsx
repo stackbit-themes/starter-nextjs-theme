@@ -57,7 +57,17 @@ export default class FormBlock extends React.Component<any> {
     }
 
     render() {
-        const { fields = [], elementId, action, destination, submitLabel, className, styles = {}, 'data-sb-field-path': annotation } = this.props;
+        const {
+            fields = [],
+            elementId,
+            variant = 'variant-a',
+            action,
+            destination,
+            submitLabel,
+            className,
+            styles = {},
+            'data-sb-field-path': annotation
+        } = this.props;
         if (fields.length === 0) {
             return null;
         }
@@ -73,31 +83,41 @@ export default class FormBlock extends React.Component<any> {
                 data-netlify-honeypot={formHoneypotName}
                 data-sb-field-path={annotation}
             >
-                <div className="grid sm:grid-cols-2 sm:gap-x-4" data-sb-field-path=".fields">
-                    <input type="hidden" name="form-name" value={elementId} />
-                    <input type="hidden" name="form-destination" value={destination} />
-                    {fields.map((field, index) => {
-                        const fieldType = field.type;
-                        if (!fieldType) {
-                            throw new Error(`form field does not have the 'type' property`);
-                        }
-                        const FormControl = getComponent(fieldType);
-                        if (!FormControl) {
-                            throw new Error(`no component matching the form field type: ${fieldType}`);
-                        }
-                        return <FormControl key={index} {...field} data-sb-field-path={`.${index}`} />;
-                    })}
-                </div>
-                <div className={classNames('mt-4', styles.submitLabel?.textAlign ? mapStyles({ textAlign: styles.submitLabel?.textAlign }) : null)}>
-                    <button
-                        type="submit"
-                        className="sb-component sb-component-block sb-component-button sb-component-button-primary"
-                        data-sb-field-path=".submitLabel"
+                <div className={classNames('w-full', 'flex', 'flex-col', { 'sm:flex-row': variant === 'variant-b' })}>
+                    <div
+                        className={classNames('grid', 'gap-y-4', 'sm:grid-cols-2', 'sm:gap-x-4', { 'sm:flex-grow': variant === 'variant-b' })}
+                        data-sb-field-path=".fields"
                     >
-                        {submitLabel}
-                    </button>
-                    {this.state.submitted && <span className="ml-8">Thank you, your message was sent.</span>}
-                    {this.state.error && <span className="ml-8 text-info">Something went wrong, please try again.</span>}
+                        <input type="hidden" name="form-name" value={elementId} />
+                        <input type="hidden" name="form-destination" value={destination} />
+                        {fields.map((field, index) => {
+                            const fieldType = field.type;
+                            if (!fieldType) {
+                                throw new Error(`form field does not have the 'type' property`);
+                            }
+                            const FormControl = getComponent(fieldType);
+                            if (!FormControl) {
+                                throw new Error(`no component matching the form field type: ${fieldType}`);
+                            }
+                            return <FormControl key={index} {...field} data-sb-field-path={`.${index}`} />;
+                        })}
+                    </div>
+                    <div
+                        className={classNames(
+                            variant === 'variant-a' ? 'mt-8' : 'mt-4 sm:mt-0 sm:ml-4',
+                            styles.submitLabel?.textAlign ? mapStyles({ textAlign: styles.submitLabel?.textAlign }) : null
+                        )}
+                    >
+                        <button
+                            type="submit"
+                            className="sb-component sb-component-block sb-component-button sb-component-button-primary"
+                            data-sb-field-path=".submitLabel"
+                        >
+                            {submitLabel}
+                        </button>
+                        {this.state.submitted && <span className="ml-8">Thank you, your message was sent.</span>}
+                        {this.state.error && <span className="ml-8 text-info">Something went wrong, please try again.</span>}
+                    </div>
                 </div>
             </form>
         );

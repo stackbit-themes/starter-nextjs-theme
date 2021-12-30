@@ -3,9 +3,21 @@ name: FormBlock
 label: Form
 labelField: elementId
 fieldGroups:
+  - name: styles
+    label: Styles
   - name: settings
     label: Settings
 fields:
+  - type: enum
+    name: variant
+    group: styles
+    label: Form arrangement
+    options:
+      - label: Submit button at the bottom
+        value: variant-a
+      - label: Submit button on the right
+        value: variant-b
+    default: variant-a
   - type: list
     name: fields
     label: Fields
