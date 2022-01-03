@@ -171,16 +171,16 @@
                         "height": "auto",
                         "width": "narrow",
                         "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
-                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "padding": ["pt-24", "pb-36", "pl-4", "pr-4"],
                         "alignItems": "center",
                         "justifyContent": "center",
                         "flexDirection": "row"
                     },
                     "title": {
-                        "textAlign": "left"
+                        "textAlign": "center"
                     },
                     "text": {
-                        "textAlign": "left"
+                        "textAlign": "center"
                     }
                 }
             }
