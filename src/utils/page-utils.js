@@ -1,8 +1,8 @@
 const path = require('path');
 
 function urlPathFromFilePath(filePath) {
-    const pathObject = path.parse(filePath);
-    const parts = pathObject.dir.split(path.sep).filter(Boolean);
+    const pathObject = path.posix.parse(filePath);
+    const parts = pathObject.dir.split(path.posix.sep).filter(Boolean);
     if (pathObject.name !== 'index') {
         parts.push(pathObject.name);
     }
@@ -11,7 +11,10 @@ function urlPathFromFilePath(filePath) {
 }
 
 function cssClassesFromUrlPath(urlPath) {
-    const parts = urlPath.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+    const parts = urlPath
+        .replace(/^\/|\/$/g, '')
+        .split('/')
+        .filter(Boolean);
 
     let css = 'page';
     return parts.map((part) => {
@@ -21,8 +24,8 @@ function cssClassesFromUrlPath(urlPath) {
 }
 
 function cssClassesFromFilePath(filePath) {
-    const pathObject = path.parse(filePath);
-    const parts = pathObject.dir.split(path.sep).filter(Boolean);
+    const pathObject = path.posix.parse(filePath);
+    const parts = pathObject.dir.split(path.posix.sep).filter(Boolean);
     parts.push(pathObject.name);
 
     let css = 'page';
