@@ -6,7 +6,7 @@ fields:
   - type: string
     name: question
     label: Question
-    default: How it this different from what we have today?
+    default: How is this different from what we have today?
     required: true
   - type: markdown
     name: answer
