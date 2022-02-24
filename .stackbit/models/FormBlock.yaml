@@ -61,6 +61,12 @@ fields:
     label: Destination (email to redirect responses)
     default: ''
     group: settings
+  - type: string
+    name: thankYouPageUrl
+    label: 'Thank you page URL'
+    default: ''
+    description: 'Send users to this URL after their form submission.'
+    group: settings
   - type: style
     name: styles
     styles:

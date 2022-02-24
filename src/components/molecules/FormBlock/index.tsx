@@ -21,7 +21,7 @@ export default class FormBlock extends React.Component<any> {
         });
     }
 
-    handleSubmit(event, formAction) {
+    handleSubmit(event, formAction, thankYouPageUrl?: string) {
         event.preventDefault();
 
         const data = new FormData(this.formRef.current);
@@ -37,7 +37,11 @@ export default class FormBlock extends React.Component<any> {
                 this.setState({
                     submitted: true
                 });
-                this.formRef.current.reset();
+                if (thankYouPageUrl) {
+                    window.location.href = thankYouPageUrl;
+                } else {
+                    this.formRef.current.reset();
+                }
             })
             .catch(() => {
                 this.setState({
@@ -57,17 +61,17 @@ export default class FormBlock extends React.Component<any> {
     }
 
     render() {
-        const { fields = [], elementId, action, destination, submitLabel, className, styles = {}, 'data-sb-field-path': annotation } = this.props;
+        const { fields = [], elementId, action, destination, submitLabel, className, styles = {}, 'data-sb-field-path': annotation, thankYouPageUrl} = this.props;
         if (fields.length === 0) {
             return null;
         }
         const formHoneypotName = `${elementId}-bot-field`;
         return (
             <form
-                className={classNames('sb-component', 'sb-component-block', 'sb-component-form-block', className)}
+                className={classNames('sb-component', 'sb-component-block', 'sb-component-form-block', className, thankYouPageUrl)}
                 name={elementId}
                 id={elementId}
-                onSubmit={(e) => this.handleSubmit(e, action)}
+                onSubmit={(e) => this.handleSubmit(e, action, thankYouPageUrl)}
                 data-netlify="true"
                 ref={this.formRef}
                 data-netlify-honeypot={formHoneypotName}
