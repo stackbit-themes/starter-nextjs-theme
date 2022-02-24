@@ -3,6 +3,8 @@ label: Blog
 labelField: title
 layout: PostFeedLayout
 hideContent: true
+extends:
+  - Seo
 fields:
   - type: string
     name: title

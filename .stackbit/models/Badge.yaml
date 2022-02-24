@@ -1,6 +1,7 @@
 type: object
 name: Badge
 label: Badge
+labelField: label
 fieldGroups:
   - name: settings
     label: Settings

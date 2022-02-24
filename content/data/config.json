@@ -1,5 +1,6 @@
 {
     "type": "Config",
+    "favicon": "/images/favicon.svg",
     "header": {
         "headerVariant": "variant-c",
         "primaryColors": "colors-a",
@@ -44,12 +45,7 @@
         "styles": {
             "self": {
                 "width": "narrow",
-                "padding": [
-                    "pt-5",
-                    "pb-5",
-                    "pr-4",
-                    "pl-4"
-                ]
+                "padding": ["pt-5", "pb-5", "pr-4", "pl-4"]
             }
         },
         "logo": {
@@ -81,6 +77,7 @@
         },
         "title": "Starter",
         "contacts": {
+            "title": "Contact details",
             "phoneNumber": "850-123-5021",
             "phoneAltText": "Our phone",
             "email": "info@lorem.mail",
@@ -88,7 +85,7 @@
             "address": "312 Lovely Street, NY",
             "addressAltText": "Our address"
         },
-        "copyrightText": "Powered by Stackbit",
+        "copyrightText": "Powered by [Stackbit](https://www.stackbit.com/)",
         "primaryLinks": [
             {
                 "type": "Link",
@@ -153,12 +150,7 @@
         "styles": {
             "self": {
                 "width": "narrow",
-                "padding": [
-                    "pt-16",
-                    "pb-16",
-                    "pr-4",
-                    "pl-4"
-                ]
+                "padding": ["pt-16", "pb-16", "pr-4", "pl-4"]
             }
         }
     }

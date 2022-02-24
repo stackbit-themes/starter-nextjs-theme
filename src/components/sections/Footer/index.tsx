@@ -62,7 +62,15 @@ export default function Footer(props) {
                 )}
                 <div className="sb-divider" />
                 <div className="flex flex-col-reverse justify-between pt-6 lg:flex-row">
-                    {props.copyrightText && <p data-sb-field-path=".copyrightText">{props.copyrightText}</p>}
+                    {props.copyrightText && (
+                        <Markdown
+                            options={{ forceInline: true, forceWrapper: true, wrapper: 'p' }}
+                            className={classNames('sb-markdown')}
+                            data-sb-field-path=".copyrightText"
+                        >
+                            {props.copyrightText}
+                        </Markdown>
+                    )}
                     {legalLinks.length > 0 && (
                         <ul className="flex flex-col mb-6 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row" data-sb-field-path=".legalLinks">
                             {legalLinks.map((link, index) => (

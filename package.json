@@ -16,7 +16,6 @@
         "analyze:browser": "BUNDLE_ANALYZE=browser next build"
     },
     "dependencies": {
-        "@stackbit/cli": "^0.1.25",
         "axios": "^0.24.0",
         "classnames": "^2.3.1",
         "dayjs": "^1.10.7",
@@ -26,12 +25,13 @@
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "sourcebit": "^0.11.0",
-        "sourcebit-source-filesystem": "^0.1.6",
+        "sourcebit-source-filesystem": "^0.2.0",
         "sourcebit-target-next": "^0.7.1",
         "tailwindcss": "^2.2.4"
     },
     "devDependencies": {
         "@next/bundle-analyzer": "^11.1.2",
+        "@stackbit/cli": "^0.1.25",
         "@types/react": "^17.0.37",
         "autoprefixer": "^10.2.6",
         "eslint": "^7.29.0",
@@ -40,7 +40,7 @@
         "postcss": "^8.3.5",
         "postcss-import": "^14.0.2",
         "postcss-nested": "^5.0.6",
-        "prettier": "^2.3.2",
+        "prettier": "^2.5.1",
         "sass": "^1.40.0",
         "typescript": "^4.5.2",
         "webpack-bundle-analyzer": "^4.4.2"

@@ -1,11 +1,15 @@
 type: object
 name: ContactBlock
 label: Contact
-labelField: phoneNumber
+labelField: title
 fieldGroups:
   - name: settings
     label: Settings
 fields:
+  - type: string
+    name: title
+    description: The value of the field is used for presentation purposes in Stackbit
+    default: Contact details
   - type: string
     name: phoneNumber
     label: Phone number

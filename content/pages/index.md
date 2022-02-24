@@ -79,8 +79,8 @@ sections:
         margin:
           - mt-24
           - mb-0
-          - ml-0
-          - mr-0
+          - ml-4
+          - mr-4
         padding:
           - pt-16
           - pb-16
@@ -420,31 +420,31 @@ sections:
     elementId: ''
     title: Need Answers?
     items:
-      - question: How it this different from what we have today?
+      - question: How is this different from what we have today?
         answer: >-
           At the office, working together is often a distruction, on remote, it
           could be motivation, At the office, working together is often a
           distruction, on remote, it could be motivation, At the office, working
           together is often a distruction, on remote, it could be motivation
-      - question: How it this different from what we have today?
+      - question: How is this different from what we have today?
         answer: >-
           At the office, working together is often a distruction, on remote, it
           could be motivation, At the office, working together is often a
           distruction, on remote, it could be motivation, At the office, working
           together is often a distruction, on remote, it could be motivation
-      - question: How it this different from what we have today?
+      - question: How is this different from what we have today?
         answer: >-
           At the office, working together is often a distruction, on remote, it
           could be motivation, At the office, working together is often a
           distruction, on remote, it could be motivation, At the office, working
           together is often a distruction, on remote, it could be motivation
-      - question: How it this different from what we have today?
+      - question: How is this different from what we have today?
         answer: >-
           At the office, working together is often a distruction, on remote, it
           could be motivation. At the office, working together is often a
           distruction, on remote, it could be motivation. At the office, working
           together is often a distruction, on remote, it could be motivation.
-      - question: How it this different from what we have today?
+      - question: How is this different from what we have today?
         answer: >-
           At the office, working together is often a distruction, on remote, it
           could be motivation. At the office, working together is often a
@@ -525,6 +525,7 @@ sections:
       increase your team’s productivity
     form:
       type: FormBlock
+      variant: variant-b
       elementId: sign-up-form
       destination: ''
       action: /.netlify/functions/submission_created

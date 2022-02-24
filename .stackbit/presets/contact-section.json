@@ -10,6 +10,7 @@
                 "text": "We look forward to hearing from you.",
                 "form": {
                     "type": "FormBlock",
+                    "variant": "variant-a",
                     "elementId": "contact-form",
                     "action": "/.netlify/functions/submission_created",
                     "destination": "",
@@ -77,6 +78,7 @@
                 "text": "We look forward to hearing from you.",
                 "form": {
                     "type": "FormBlock",
+                    "variant": "variant-a",
                     "elementId": "contact-form",
                     "action": "/.netlify/functions/submission_created",
                     "destination": "",
@@ -148,6 +150,7 @@
                 "text": "Sign up your team today to be the first to try out our new product to increase your team's productivity.",
                 "form": {
                     "type": "FormBlock",
+                    "variant": "variant-b",
                     "elementId": "sign-up-form",
                     "action": "/.netlify/functions/submission_created",
                     "destination": "",
@@ -168,16 +171,16 @@
                         "height": "auto",
                         "width": "narrow",
                         "margin": ["mt-0", "mb-0", "ml-0", "mr-0"],
-                        "padding": ["pt-12", "pb-12", "pl-4", "pr-4"],
+                        "padding": ["pt-24", "pb-36", "pl-4", "pr-4"],
                         "alignItems": "center",
                         "justifyContent": "center",
                         "flexDirection": "row"
                     },
                     "title": {
-                        "textAlign": "left"
+                        "textAlign": "center"
                     },
                     "text": {
-                        "textAlign": "left"
+                        "textAlign": "center"
                     }
                 }
             }
