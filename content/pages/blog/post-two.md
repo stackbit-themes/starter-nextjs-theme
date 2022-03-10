@@ -1,8 +1,9 @@
 ---
 title: A Work Bubbles
-layout: PostLayout
+type: PostLayout
 date: '2021-07-01'
 author: content/data/team/hugh-saturation.json
+category: content/data/categories/react.json
 excerpt: >-
   Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem
   semper. Donec sed facilisis nibh.

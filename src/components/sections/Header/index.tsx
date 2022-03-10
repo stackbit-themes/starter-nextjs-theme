@@ -2,173 +2,182 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import { StackbitObjectId, getObjectId, toFieldPath } from '@stackbit/annotations';
+import type * as types from 'types';
 
-import { Link, Action } from '../../atoms';
-import ImageBlock from '../../molecules/ImageBlock';
+import { Action } from '../../atoms/Action';
+import { Link } from '../../atoms/Link';
+import { ImageBlock } from '../../blocks/ImageBlock';
 import CloseIcon from '../../svgs/close';
 import MenuIcon from '../../svgs/menu';
 
-export default function Header(props) {
-    const primaryColors = props.primaryColors || 'colors-a';
-    const headerStyles = props.styles?.self || {};
-    const headerWidth = headerStyles.width || 'narrow';
+export type Props = types.Header & StackbitObjectId;
+
+export const Header: React.FC<Props> = (props) => {
+    const { primaryColors = 'colors-a', styles = {}, ...rest } = props;
+    const objectId = getObjectId(props);
+    const fieldPath = objectId ? `${objectId}:header` : null;
     return (
         <header
-            className={classNames('sb-component', 'sb-component-header', primaryColors, 'relative', headerStyles.padding || 'py-5 px-4')}
-            data-sb-field-path={`${props.annotationPrefix}:header`}
+            className={classNames('sb-component', 'sb-component-header', primaryColors, 'relative', styles.self?.padding ?? 'py-5 px-4')}
+            {...toFieldPath(fieldPath)}
         >
-            <div className={classNames('mx-auto', mapMaxWidthStyles(headerWidth))}>
+            <div className={classNames('mx-auto', mapMaxWidthStyles(styles.self?.width ?? 'narrow'))}>
                 <Link href="#main" className="sr-only">
                     Skip to main content
                 </Link>
-                {headerVariants(props)}
+                <HeaderVariants {...rest} />
             </div>
         </header>
     );
-}
+};
 
-function headerVariants(props) {
-    const headerVariant = props.headerVariant || 'variant-a';
+const HeaderVariants: React.FC<Props> = (props) => {
+    const { headerVariant = 'variant-a', ...rest } = props;
     switch (headerVariant) {
         case 'variant-a':
-            return headerVariantA(props);
+            return <HeaderVariantA {...rest} />;
         case 'variant-b':
-            return headerVariantB(props);
+            return <HeaderVariantB {...rest} />;
         case 'variant-c':
-            return headerVariantC(props);
+            return <HeaderVariantC {...rest} />;
         case 'variant-d':
-            return headerVariantD(props);
+            return <HeaderVariantD {...rest} />;
         case 'variant-e':
-            return headerVariantE(props);
+            return <HeaderVariantE {...rest} />;
     }
-    return null;
-}
+};
 
-function headerVariantA(props) {
-    const primaryLinks = props.primaryLinks || [];
-    const secondaryLinks = props.secondaryLinks || [];
+const HeaderVariantA: React.FC<Props> = (props) => {
+    const { title, isTitleVisible, logo, primaryLinks = [], secondaryLinks = [] } = props;
     return (
-        <div className="flex items-center relative">
-            {(props.logo || (props.title && props.isTitleVisible)) && <div className="mr-8">{siteLogoLink(props)}</div>}
+        <div className="relative flex items-center">
+            {(logo || (title && isTitleVisible)) && (
+                <div className="mr-8">
+                    <SiteLogoLink title={title} isTitleVisible={isTitleVisible} logo={logo} />
+                </div>
+            )}
             {primaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center mr-8 space-x-8" data-sb-field-path=".primaryLinks">
-                    {listOfLinks(primaryLinks)}
+                <ul className="hidden mr-8 space-x-8 lg:flex lg:items-center" {...toFieldPath('.primaryLinks')}>
+                    <ListOfLinks links={primaryLinks} />
                 </ul>
             )}
             {secondaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto space-x-8" data-sb-field-path=".secondaryLinks">
-                    {listOfLinks(secondaryLinks)}
+                <ul className="hidden ml-auto space-x-8 lg:flex lg:items-center" {...toFieldPath('.secondaryLinks')}>
+                    <ListOfLinks links={secondaryLinks} />
                 </ul>
             )}
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
-}
+};
 
-function headerVariantB(props) {
-    const primaryLinks = props.primaryLinks || [];
-    const secondaryLinks = props.secondaryLinks || [];
+const HeaderVariantB: React.FC<Props> = (props) => {
+    const { title, isTitleVisible, logo, primaryLinks = [], secondaryLinks = [] } = props;
     return (
-        <div className="flex items-center relative">
-            {(props.logo || (props.title && props.isTitleVisible)) && <div className="mr-8">{siteLogoLink(props)}</div>}
+        <div className="relative flex items-center">
+            {(logo || (title && isTitleVisible)) && (
+                <div className="mr-8">
+                    <SiteLogoLink title={title} isTitleVisible={isTitleVisible} logo={logo} />
+                </div>
+            )}
             {primaryLinks.length > 0 && (
                 <ul
-                    className="hidden lg:flex lg:items-center space-x-8 absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto"
-                    data-sb-field-path=".primaryLinks"
+                    className="absolute hidden w-auto space-x-8 transform -translate-x-1/2 -translate-y-1/2 lg:flex lg:items-center left-1/2 top-1/2"
+                    {...toFieldPath('.primaryLinks')}
                 >
-                    {listOfLinks(primaryLinks)}
+                    <ListOfLinks links={primaryLinks} />
                 </ul>
             )}
             {secondaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto space-x-8" data-sb-field-path=".secondaryLinks">
-                    {listOfLinks(secondaryLinks)}
+                <ul className="hidden ml-auto space-x-8 lg:flex lg:items-center" {...toFieldPath('.secondaryLinks')}>
+                    <ListOfLinks links={secondaryLinks} />
                 </ul>
             )}
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
-}
+};
 
-function headerVariantC(props) {
-    const primaryLinks = props.primaryLinks || [];
-    const secondaryLinks = props.secondaryLinks || [];
+const HeaderVariantC: React.FC<Props> = (props) => {
+    const { title, isTitleVisible, logo, primaryLinks = [], secondaryLinks = [] } = props;
     return (
-        <div className="flex items-center relative">
-            {(props.logo || (props.title && props.isTitleVisible)) && <div className="mr-8">{siteLogoLink(props)}</div>}
+        <div className="relative flex items-center">
+            {(logo || (title && isTitleVisible)) && (
+                <div className="mr-8">
+                    <SiteLogoLink title={title} isTitleVisible={isTitleVisible} logo={logo} />
+                </div>
+            )}
             {primaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto space-x-8" data-sb-field-path=".primaryLinks">
-                    {listOfLinks(primaryLinks)}
+                <ul className="hidden ml-auto space-x-8 lg:flex lg:items-center" {...toFieldPath('.primaryLinks')}>
+                    <ListOfLinks links={primaryLinks} />
                 </ul>
             )}
             {secondaryLinks.length > 0 && (
                 <ul
                     className={classNames('hidden', 'lg:flex', 'lg:items-center', 'space-x-8', primaryLinks.length > 0 ? 'ml-8' : 'ml-auto')}
-                    data-sb-field-path=".secondaryLinks"
+                    {...toFieldPath('.secondaryLinks')}
                 >
-                    {listOfLinks(secondaryLinks)}
+                    <ListOfLinks links={secondaryLinks} />
                 </ul>
             )}
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
-}
+};
 
-function headerVariantD(props) {
-    const primaryLinks = props.primaryLinks || [];
-    const secondaryLinks = props.secondaryLinks || [];
+const HeaderVariantD: React.FC<Props> = (props) => {
+    const { title, isTitleVisible, logo, primaryLinks = [], secondaryLinks = [] } = props;
     return (
-        <div className="flex items-center relative">
-            {(props.logo || (props.title && props.isTitleVisible)) && (
+        <div className="relative flex items-center">
+            {(logo || (title && isTitleVisible)) && (
                 <div className="mr-8 lg:mr-0 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-y-1/2 lg:-translate-x-1/2">
-                    {siteLogoLink(props)}
+                    <SiteLogoLink title={title} isTitleVisible={isTitleVisible} logo={logo} />
                 </div>
             )}
             {primaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center space-x-8" data-sb-field-path=".primaryLinks">
-                    {listOfLinks(primaryLinks)}
+                <ul className="hidden space-x-8 lg:flex lg:items-center" {...toFieldPath('.primaryLinks')}>
+                    <ListOfLinks links={primaryLinks} />
                 </ul>
             )}
             {secondaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto space-x-8" data-sb-field-path=".secondaryLinks">
-                    {listOfLinks(secondaryLinks)}
+                <ul className="hidden ml-auto space-x-8 lg:flex lg:items-center" {...toFieldPath('.secondaryLinks')}>
+                    <ListOfLinks links={secondaryLinks} />
                 </ul>
             )}
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
-}
+};
 
-function headerVariantE(props) {
-    const primaryLinks = props.primaryLinks || [];
-    const secondaryLinks = props.secondaryLinks || [];
+const HeaderVariantE: React.FC<Props> = (props) => {
+    const { title, isTitleVisible, logo, primaryLinks = [], secondaryLinks = [] } = props;
     return (
         <>
-            <div className="flex items-center relative">
-                {(props.logo || (props.title && props.isTitleVisible)) && (
+            <div className="relative flex items-center">
+                {(logo || (title && isTitleVisible)) && (
                     <div className="mr-8 lg:mr-0 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-y-1/2 lg:-translate-x-1/2">
-                        {siteLogoLink(props)}
+                        <SiteLogoLink title={title} isTitleVisible={isTitleVisible} logo={logo} />
                     </div>
                 )}
                 {secondaryLinks.length > 0 && (
-                    <ul className="hidden lg:flex lg:items-center space-x-8 ml-auto" data-sb-field-path=".secondaryLinks">
-                        {listOfLinks(secondaryLinks)}
+                    <ul className="hidden ml-auto space-x-8 lg:flex lg:items-center" {...toFieldPath('.secondaryLinks')}>
+                        {ListOfLinks({ links: secondaryLinks })}
                     </ul>
                 )}
                 {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
             </div>
             {primaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center lg:justify-center space-x-8 mt-4" data-sb-field-path=".primaryLinks">
-                    {listOfLinks(primaryLinks)}
+                <ul className="hidden mt-4 space-x-8 lg:flex lg:items-center lg:justify-center" {...toFieldPath('.primaryLinks')}>
+                    <ListOfLinks links={primaryLinks} />
                 </ul>
             )}
         </>
     );
-}
+};
 
-function MobileMenu(props) {
-    const secondaryColors = props.secondaryColors || 'colors-a';
-    const primaryLinks = props.primaryLinks || [];
-    const secondaryLinks = props.secondaryLinks || [];
+const MobileMenu: React.FC<Props> = (props) => {
+    const { secondaryColors = 'colors-a', title, isTitleVisible, logo, primaryLinks = [], secondaryLinks = [] } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
 
@@ -185,52 +194,74 @@ function MobileMenu(props) {
 
     return (
         <div className="ml-auto lg:hidden">
-            <button aria-label="Open Menu" title="Open Menu" className="p-2 -mr-1 focus:outline-none" onClick={() => setIsMenuOpen(true)}>
+            <button aria-label="Open Menu" className="p-2 -mr-1 focus:outline-none" onClick={() => setIsMenuOpen(true)}>
                 <span className="sr-only">Open Menu</span>
-                <MenuIcon className="fill-current h-6 w-6" />
+                <MenuIcon className="w-6 h-6 fill-current" />
             </button>
-            <div className={classNames(secondaryColors, 'fixed', 'inset-0', 'px-4', 'sm:px-8', 'py-5', 'overflow-y-auto', 'z-20', isMenuOpen ? 'block' : 'hidden')}>
+            <div
+                className={classNames(
+                    secondaryColors,
+                    'fixed',
+                    'inset-0',
+                    'px-4',
+                    'sm:px-8',
+                    'py-5',
+                    'overflow-y-auto',
+                    'z-20',
+                    isMenuOpen ? 'block' : 'hidden'
+                )}
+            >
                 <div className="flex flex-col min-h-full">
                     <div className="flex items-center justify-between mb-10">
-                        {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
-                        <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={() => setIsMenuOpen(false)}>
-                            <CloseIcon className="fill-current h-6 w-6" />
+                        {(logo || (title && isTitleVisible)) && <SiteLogoLink title={title} isTitleVisible={isTitleVisible} logo={logo} />}
+                        <button aria-label="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={() => setIsMenuOpen(false)}>
+                            <CloseIcon className="w-6 h-6 fill-current" />
                         </button>
                     </div>
                     {primaryLinks.length > 0 && (
-                        <ul className="flex-grow mb-10 space-y-6" data-sb-field-path=".primaryLinks">
-                            {listOfLinks(primaryLinks, true)}
+                        <ul className="flex-grow mb-10 space-y-6" {...toFieldPath('.primaryLinks')}>
+                            <ListOfLinks links={primaryLinks} inMobileMenu />
                         </ul>
                     )}
                     {secondaryLinks.length > 0 && (
-                        <ul className="mb-10 space-y-5" data-sb-field-path=".secondaryLinks">
-                            {listOfLinks(secondaryLinks, true)}
+                        <ul className="mb-10 space-y-5" {...toFieldPath('.secondaryLinks')}>
+                            <ListOfLinks links={secondaryLinks} inMobileMenu />
                         </ul>
                     )}
                 </div>
             </div>
         </div>
     );
-}
+};
 
-function siteLogoLink(props) {
+const SiteLogoLink: React.FC<{ title?: string; isTitleVisible?: boolean; logo?: types.ImageBlock }> = ({ title, isTitleVisible, logo }) => {
     return (
-        <Link href="/" aria-label={props.title} className="sb-header-logo flex items-center" data-sb-field-path=".title#span[1] .logo#img[1]">
-            {props.logo && <ImageBlock {...props.logo} className={classNames('max-h-12', { 'mr-2': props.isTitleVisible })} />}
-            {props.title && props.isTitleVisible && <span className="text-2xl tracking-wide">{props.title}</span>}
+        <Link href="/" aria-label={title} className="flex items-center sb-header-logo">
+            {logo && <ImageBlock {...logo} className={classNames('max-h-12', { 'mr-2': isTitleVisible })} {...toFieldPath('.logo')} />}
+            {title && isTitleVisible && (
+                <span className="text-2xl tracking-wide" {...toFieldPath('.title')}>
+                    {title}
+                </span>
+            )}
         </Link>
     );
-}
+};
 
-function listOfLinks(links, inMobileMenu = false) {
-    return links.map((link, index) => (
-        <li key={index}>
-            <Action {...link} className={classNames(inMobileMenu && link.type === 'Button' ? 'w-full' : '')} data-sb-field-path={`.${index}`} />
-        </li>
-    ));
-}
+type Action = types.Button | types.Link;
 
-function mapMaxWidthStyles(width) {
+const ListOfLinks: React.FC<{ links: Action[]; inMobileMenu?: boolean }> = ({ links, inMobileMenu = false }) => {
+    return (
+        <>
+            {links.map((link, index) => (
+                <li key={index}>
+                    <Action {...link} className={classNames(inMobileMenu && link.type === 'Button' ? 'w-full' : '')} {...toFieldPath(`.${index}`)} />
+                </li>
+            ))}
+        </>
+    );
+};
+
+function mapMaxWidthStyles(width: string) {
     switch (width) {
         case 'narrow':
             return 'max-w-screen-xl';

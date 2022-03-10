@@ -35,7 +35,7 @@ fields:
     group: styles
     label: Background image
     models:
-      - ImageBlock
+      - BackgroundImage
     default:
       type: ImageBlock
       url: https://assets.stackbit.com/components/images/default/bg.jpg

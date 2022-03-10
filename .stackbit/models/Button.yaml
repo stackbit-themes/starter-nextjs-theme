@@ -96,7 +96,7 @@ fields:
         value: primary
       - label: Secondary
         value: secondary
-    default: secondary
+    default: primary
   - type: string
     name: elementId
     group: settings

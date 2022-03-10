@@ -52,7 +52,7 @@ fields:
     group: styles
     label: Background image
     models:
-      - ImageBlock
+      - BackgroundImage
   - type: style
     name: styles
     styles:

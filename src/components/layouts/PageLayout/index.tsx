@@ -1,33 +1,29 @@
 import * as React from 'react';
+import { toFieldPath } from '@stackbit/annotations';
+import type * as types from 'types';
 
-import { getBaseLayoutComponent } from '../../../utils/base-layout';
-import { getComponent } from '../../components-registry';
+import { DynamicComponent } from '../../DynamicComponent';
+import type { SectionsProps } from '../../sections/mapSectionProps';
 
-export default function PageLayout(props) {
-    const { page, site } = props;
-    const BaseLayout = getBaseLayoutComponent(page.baseLayout, site.baseLayout);
-    const sections = page.sections || [];
+export type Props = Omit<types.PageLayout, 'sections'> & {
+    sections: SectionsProps[];
+};
 
+export const PageLayout: React.FC<Props> = (page) => {
     return (
-        <BaseLayout page={page} site={site}>
-            <main id="main" className="sb-layout sb-page-layout">
-                {page.title && (
-                    <h1 className="sr-only" data-sb-field-path="title">
-                        {page.title}
-                    </h1>
-                )}
-                {sections.length > 0 && (
-                    <div data-sb-field-path="sections">
-                        {sections.map((section, index) => {
-                            const Component = getComponent(section.type);
-                            if (!Component) {
-                                throw new Error(`no component matching the page section's type: ${section.type}`);
-                            }
-                            return <Component key={index} {...section} data-sb-field-path={`sections.${index}`} />;
-                        })}
-                    </div>
-                )}
-            </main>
-        </BaseLayout>
+        <main id="main" className="sb-layout sb-page-layout">
+            {page.title && (
+                <h1 className="sr-only" {...toFieldPath('title')}>
+                    {page.title}
+                </h1>
+            )}
+            {page.sections.length > 0 && (
+                <div {...toFieldPath('sections')}>
+                    {page.sections.map((section, index) => (
+                        <DynamicComponent key={index} {...section} {...toFieldPath(`sections.${index}`)} />
+                    ))}
+                </div>
+            )}
+        </main>
     );
-}
+};

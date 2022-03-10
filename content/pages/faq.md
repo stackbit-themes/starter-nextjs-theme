@@ -1,6 +1,6 @@
 ---
 title: FAQ
-layout: PageLayout
+type: PageLayout
 sections:
   - colors: colors-a
     elementId: ''

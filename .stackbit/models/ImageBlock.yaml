@@ -27,11 +27,3 @@ fields:
     label: Element ID
     description: The unique ID for an HTML element, must not contain whitespace
     default: ''
-  - type: style
-    name: styles
-    styles:
-      self:
-        opacity: '*'
-    default:
-      self:
-        opacity: 100

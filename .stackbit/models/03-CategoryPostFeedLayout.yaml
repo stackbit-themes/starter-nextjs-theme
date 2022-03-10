@@ -1,0 +1,13 @@
+name: CategoryPostFeedLayout
+label: Category Page
+labelField: title
+layout: CategoryPostFeedLayout
+hideContent: true
+extends:
+  - PostFeedLayout
+fields:
+  - type: reference
+    name: category
+    label: Category
+    required: true
+    models: [BlogCategory]

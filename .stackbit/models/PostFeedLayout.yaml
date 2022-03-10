@@ -1,5 +1,5 @@
 name: PostFeedLayout
-label: Blog
+label: Blog Feed
 labelField: title
 layout: PostFeedLayout
 hideContent: true
@@ -10,6 +10,7 @@ fields:
     name: title
     label: Title
     default: This is a page title
+    required: true
   - type: number
     name: numOfPostsPerPage
     label: Number of Posts per page

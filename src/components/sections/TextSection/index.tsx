@@ -1,93 +1,42 @@
 import * as React from 'react';
-import Markdown from 'markdown-to-jsx';
 import classNames from 'classnames';
+import { toFieldPath, pickDataAttrs } from '@stackbit/annotations';
+import type * as types from 'types';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
-import { getDataAttrs } from '../../../utils/get-data-attrs';
+import { Section } from '../Section';
+import { Markdown } from '../../atoms/Markdown';
 
-export default function TextSection(props) {
-    const cssId = props.elementId || null;
-    const colors = props.colors || 'colors-a';
-    const sectionStyles = props.styles?.self || {};
-    const sectionWidth = sectionStyles.width || 'wide';
-    const sectionHeight = sectionStyles.height || 'auto';
-    const sectionJustifyContent = sectionStyles.justifyContent || 'center';
-    return (
-        <div
-            id={cssId}
-            {...getDataAttrs(props)}
-            className={classNames(
-                'sb-component',
-                'sb-component-section',
-                'sb-component-text-section',
-                colors,
-                'flex',
-                'flex-col',
-                'justify-center',
-                mapMinHeightStyles(sectionHeight),
-                sectionStyles.margin,
-                sectionStyles.padding || 'py-12 px-4',
-                sectionStyles.borderColor,
-                sectionStyles.borderStyle ? mapStyles({ borderStyle: sectionStyles.borderStyle }) : 'border-none',
-                sectionStyles.borderRadius ? mapStyles({ borderRadius: sectionStyles.borderRadius }) : null
-            )}
-            style={{
-                borderWidth: sectionStyles.borderWidth ? `${sectionStyles.borderWidth}px` : null
-            }}
-        >
-            <div className={classNames('flex', 'w-full', mapStyles({ justifyContent: sectionJustifyContent }))}>
-                <div className={classNames('w-full', mapMaxWidthStyles(sectionWidth))}>{textBody(props)}</div>
-            </div>
-        </div>
-    );
-}
+export type Props = types.TextSection;
 
-function textBody(props) {
-    const styles = props.styles || {};
+export const TextSection: React.FC<Props> = (props) => {
+    const { elementId, colors, title, subtitle, text, styles = {} } = props;
     return (
-        <div>
-            {props.title && (
-                <h2 className={classNames(styles.title ? mapStyles(styles.title) : null)} data-sb-field-path=".title">
-                    {props.title}
+        <Section elementId={elementId} className="sb-component-text-section" colors={colors} styles={styles.self} {...pickDataAttrs(props)}>
+            {title && (
+                <h2 className={classNames(styles.title ? mapStyles(styles.title) : null)} {...toFieldPath('.title')}>
+                    {title}
                 </h2>
             )}
-            {props.subtitle && (
+            {subtitle && (
                 <p
-                    className={classNames('text-xl', 'sm:text-2xl', styles.subtitle ? mapStyles(styles.subtitle) : null, { 'mt-2': props.title })}
-                    data-sb-field-path=".subtitle"
+                    className={classNames('text-xl', 'sm:text-2xl', styles.subtitle ? mapStyles(styles.subtitle) : null, {
+                        'mt-2': title
+                    })}
+                    {...toFieldPath('.subtitle')}
                 >
-                    {props.subtitle}
+                    {subtitle}
                 </p>
             )}
-            {props.text && (
+            {text && (
                 <Markdown
-                    options={{ forceBlock: true, forceWrapper: true }}
-                    className={classNames('sb-markdown', 'sm:text-lg', styles.text ? mapStyles(styles.text) : null, { 'mt-6': props.title || props.subtitle })}
-                    data-sb-field-path=".text"
-                >
-                    {props.text}
-                </Markdown>
+                    text={text}
+                    className={classNames('sb-markdown', 'sm:text-lg', styles.text ? mapStyles(styles.text) : null, {
+                        'mt-6': title || subtitle
+                    })}
+                    {...toFieldPath('.text')}
+                />
             )}
-        </div>
+        </Section>
     );
-}
-
-function mapMinHeightStyles(height) {
-    switch (height) {
-        case 'screen':
-            return 'min-h-screen';
-    }
-    return null;
-}
-
-function mapMaxWidthStyles(width) {
-    switch (width) {
-        case 'narrow':
-            return 'max-w-screen-md';
-        case 'wide':
-            return 'max-w-screen-xl';
-        case 'full':
-            return 'max-w-full';
-    }
-    return null;
-}
+};

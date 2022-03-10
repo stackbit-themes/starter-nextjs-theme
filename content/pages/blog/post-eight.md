@@ -2,6 +2,7 @@
 title: What Great Startups Do Differently
 date: '2020-09-26'
 excerpt: Ut expedita iure et iste placeat id consequatur veritatis et saepe voluptas non voluptas nesciunt sed voluptate rerum. Ea deleniti unde et exercitationem voluptatibus non doloribus officiis qui harum eaque.
+category: content/data/categories/next.json
 featuredImage:
   type: ImageBlock
   url: /images/post-8.jpg
@@ -26,7 +27,7 @@ bottomSections:
       actions:
         justifyContent: center
     type: RecentPostsSection
-layout: PostLayout
+type: PostLayout
 ---
 
 Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan.

@@ -2,6 +2,7 @@
 title: Top 20 Ways to Save Time at Work This Year
 date: '2021-01-05'
 author: content/data/team/dianne-ameter.json
+category: content/data/categories/next.json
 excerpt: Quo facilis culpa ut illo dolor quo placeat consequatur. A consequatur facilis aut voluptas dolores qui aperiam laborum ut ullam consequatur ut quia consequatur cum inventore voluptas sed impedit asperiores!
 featuredImage:
   type: ImageBlock
@@ -27,7 +28,7 @@ bottomSections:
       actions:
         justifyContent: center
     type: RecentPostsSection
-layout: PostLayout
+type: PostLayout
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat semper viverra nam libero justo laoreet sit. Tincidunt id aliquet risus feugiat in ante. Non diam phasellus vestibulum lorem sed. Morbi quis commodo odio aenean. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Vel eros donec ac odio tempor orci dapibus ultrices. Facilisi morbi tempus iaculis urna id volutpat. Luctus accumsan tortor posuere ac. Sagittis orci a scelerisque purus semper eget. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Dolor purus non enim praesent. Lorem sed risus ultricies tristique nulla aliquet enim tortor. Aliquam vestibulum morbi blandit cursus risus.

@@ -1,8 +1,14 @@
-import PageLayout from './PageLayout';
-import PostFeedLayout from './PostFeedLayout';
-import PostFeedCategoryLayout from './PostFeedCategoryLayout';
-import PostLayout from './PostLayout';
-import BlankBaseLayout from './BlankBaseLayout';
-import DefaultBaseLayout from './DefaultBaseLayout';
+import * as types from 'types';
 
-export { PageLayout, PostFeedLayout, PostFeedCategoryLayout, PostLayout, BlankBaseLayout, DefaultBaseLayout };
+import type { Props as PageLayoutProps } from './PageLayout';
+import type { Props as PostLayoutProps } from './PostLayout';
+import type { Props as PostFeedLayoutProps } from './PostFeedLayout';
+
+export type AllPageLayoutProps = PageLayoutProps | PostLayoutProps | PostFeedLayoutProps;
+
+export type Site = types.Config & { env?: Record<string, string>; baseLayout?: string };
+
+export type PageProps<T extends AllPageLayoutProps> = {
+    site: Site;
+    page: T & { baseLayout?: string };
+};

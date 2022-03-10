@@ -1,57 +1,71 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import { toFieldPath } from '@stackbit/annotations';
+import type * as types from 'types';
 
-import Link from '../../atoms/Link';
-import { getComponent } from '../../components-registry';
-import { getBaseLayoutComponent } from '../../../utils/base-layout';
+import { Link } from '../../atoms/Link';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
+import { PostFeedSection, PostFeedSectionPostsProps } from '../../sections/PostFeedSection';
+import { DynamicComponent } from '../../DynamicComponent';
+import type { SectionsProps } from '../../sections/mapSectionProps';
 
-export default function PostFeedLayout(props) {
-    const { page, site } = props;
-    const BaseLayout = getBaseLayoutComponent(page.baseLayout, site.baseLayout);
-    const { title, topSections = [], bottomSections = [], pageIndex, baseUrlPath, numOfPages, items, postFeed } = page;
-    const postFeedColors = postFeed?.colors || 'colors-a';
-    const postFeedWidth = postFeed?.styles?.self?.width || 'wide';
-    const postFeedJustifyContent = postFeed?.styles?.self?.justifyContent || 'center';
-    const PostFeedSection = getComponent('PostFeedSection');
-    const pageLinks = PageLinks({ pageIndex, baseUrlPath, numOfPages });
+export type Props = Omit<types.PostFeedLayout, 'topSections' | 'bottomSections'> &
+    types.Pagination<PostFeedSectionPostsProps> & {
+        annotateFields?: boolean;
+        items: PostFeedSectionPostsProps[];
+        topSections: SectionsProps[];
+        bottomSections: SectionsProps[];
+    };
+
+export const PostFeedLayout: React.FC<Props> = (page) => {
+    const { title, topSections, bottomSections, pageIndex, baseUrlPath, numOfPages, postFeed, items } = page;
+    const pageLinks = <PageLinks {...{ pageIndex, baseUrlPath, numOfPages }} />;
 
     return (
-        <BaseLayout page={page} site={site}>
-            <main id="main" className="layout page-layout">
-                {title && (
-                    <div className={classNames('flex', 'py-12', 'lg:py-14', 'px-4', postFeedColors, mapStyles({ justifyContent: postFeedJustifyContent }))}>
-                        <h1 className={classNames('w-full', mapMaxWidthStyles(postFeedWidth), page?.styles?.title ? mapStyles(page?.styles?.title) : null)} data-sb-field-path="title">
-                            {title}
-                        </h1>
-                    </div>
-                )}
-                {renderSections(topSections, 'topSections')}
-                <PostFeedSection {...postFeed} posts={items} pageLinks={pageLinks} data-sb-field-path="postFeed" />
-                {renderSections(bottomSections, 'bottomSections')}
-            </main>
-        </BaseLayout>
+        <main id="main" className="layout page-layout">
+            {title && (
+                <div
+                    className={classNames(
+                        'flex',
+                        'py-12',
+                        'lg:py-14',
+                        'px-4',
+                        postFeed?.colors ?? 'colors-a',
+                        mapStyles({ justifyContent: postFeed?.styles?.self?.justifyContent ?? 'center' })
+                    )}
+                >
+                    <h1
+                        className={classNames(
+                            'w-full',
+                            mapStyles({ width: postFeed?.styles?.self?.width ?? 'wide' }),
+                            page?.styles?.title ? mapStyles(page?.styles?.title) : null
+                        )}
+                        {...(page.annotateFields ? toFieldPath('title') : null)}
+                    >
+                        {title}
+                    </h1>
+                </div>
+            )}
+            {topSections && topSections.length > 0 && (
+                <div {...toFieldPath('topSections')}>
+                    {topSections.map((section, index) => (
+                        <DynamicComponent key={index} {...section} {...toFieldPath(`topSections.${index}`)} />
+                    ))}
+                </div>
+            )}
+            <PostFeedSection {...postFeed} posts={items} pageLinks={pageLinks} {...(page.annotateFields ? toFieldPath('postFeed') : null)} />
+            {bottomSections && bottomSections.length > 0 && (
+                <div {...toFieldPath('bottomSections')}>
+                    {bottomSections.map((section, index) => (
+                        <DynamicComponent key={index} {...section} {...toFieldPath(`bottomSections.${index}`)} />
+                    ))}
+                </div>
+            )}
+        </main>
     );
-}
+};
 
-function renderSections(sections: any[], fieldName: string) {
-    if (sections.length === 0) {
-        return null;
-    }
-    return (
-        <div data-sb-field-path={fieldName}>
-            {sections.map((section, index) => {
-                const Component = getComponent(section.type);
-                if (!Component) {
-                    throw new Error(`no component matching the page section's type: ${section.type}`);
-                }
-                return <Component key={index} {...section} data-sb-field-path={`${fieldName}.${index}`} />;
-            })}
-        </div>
-    );
-}
-
-function PageLinks({ pageIndex, baseUrlPath, numOfPages }) {
+const PageLinks: React.FC<{ pageIndex: number; baseUrlPath: string; numOfPages: number }> = ({ pageIndex, baseUrlPath, numOfPages }) => {
     if (numOfPages < 2) {
         return null;
     }
@@ -107,40 +121,26 @@ function PageLinks({ pageIndex, baseUrlPath, numOfPages }) {
     }
 
     return <div className={classNames('flex flex-row items-center justify-center mt-12 sm:mt-20')}>{pageLinks}</div>;
-}
+};
 
-function PageLink({ pageIndex, buttonLabel, baseUrlPath }) {
+const PageLink: React.FC<{ pageIndex: number; buttonLabel: string | number; baseUrlPath: string }> = ({ pageIndex, buttonLabel, baseUrlPath }) => {
     return (
-        <Link href={urlPathForPageAtIndex(pageIndex, baseUrlPath)} className="sb-component-button sb-component-button-secondary px-4 py-2 mx-2">
+        <Link href={urlPathForPageAtIndex(pageIndex, baseUrlPath)} className="px-4 py-2 mx-2 sb-component-button sb-component-button-secondary">
             {buttonLabel}
         </Link>
     );
-}
+};
 
-function PageLinkDisabled({ buttonLabel }) {
+const PageLinkDisabled: React.FC<{ buttonLabel: string | number }> = ({ buttonLabel }) => {
     return (
-        <span key="next" className="sb-component-button sb-component-button-secondary opacity-25 px-4 py-2 mx-2">
+        <span key="next" className="px-4 py-2 mx-2 opacity-25 sb-component-button sb-component-button-secondary">
             {buttonLabel}
         </span>
     );
-}
+};
 
-function Ellipsis() {
-    return <span className="px-4 py-2 mx-2">…</span>;
-}
+const Ellipsis: React.FC = () => <span className="px-4 py-2 mx-2">…</span>;
 
-function urlPathForPageAtIndex(pageIndex, baseUrlPath) {
+function urlPathForPageAtIndex(pageIndex: number, baseUrlPath: string) {
     return pageIndex === 0 ? baseUrlPath : `${baseUrlPath}/page/${pageIndex + 1}`;
-}
-
-function mapMaxWidthStyles(width) {
-    switch (width) {
-        case 'narrow':
-            return 'max-w-screen-md';
-        case 'wide':
-            return 'max-w-screen-xl';
-        case 'full':
-            return 'max-w-full';
-    }
-    return null;
 }

@@ -1,0 +1,8 @@
+name: BlogCategory
+label: Blog Category
+labelField: title
+fields:
+  - type: string
+    name: title
+    label: Title
+    required: true

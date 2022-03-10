@@ -50,10 +50,10 @@ fields:
     group: styles
     controlType: 'slider'
     min: 0
-    max: 30
+    max: 160
     step: 1
-    unit: 'rem'
-    default: 1
+    unit: 'px'
+    default: 16
   - type: number
     name: columns
     label: Images per row
@@ -83,16 +83,6 @@ fields:
       - label: Auto
         value: auto
     default: '1:1'
-  - type: number
-    name: imageSizePx
-    label: Max image size, in px
-    group: styles
-    controlType: 'slider'
-    min: 50
-    max: 640
-    step: 1
-    unit: 'px'
-    default: 300
   - type: boolean
     name: showCaption
     label: Show caption

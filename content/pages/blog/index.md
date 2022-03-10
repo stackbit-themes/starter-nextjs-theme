@@ -1,10 +1,10 @@
 ---
-layout: PostFeedLayout
+type: PostFeedLayout
 title: Blog
 numOfPostsPerPage: 10
 postFeed:
   showDate: true
-  showAuthor: false
+  showAuthor: true
   showExcerpt: false
   variant: variant-a
   colors: colors-a

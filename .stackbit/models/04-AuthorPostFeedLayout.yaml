@@ -1,0 +1,13 @@
+name: AuthorPostFeedLayout
+label: Author Page
+labelField: title
+layout: AuthorPostFeedLayout
+hideContent: true
+extends:
+  - PostFeedLayout
+fields:
+  - type: reference
+    name: author
+    label: Author
+    required: true
+    models: [Person]

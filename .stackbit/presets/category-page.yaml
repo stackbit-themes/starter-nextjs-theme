@@ -1,0 +1,16 @@
+model: CategoryPostFeedLayout
+presets:
+  - label: New category page
+    thumbnail: images/category-page.png
+    data:
+      title: New category page
+      category: content/data/categories/next.json
+      numOfPostsPerPage: 10
+      showDate: true
+      showAuthor: true
+      variant: variant-c
+      postFeed:
+        type: PagedPostsSection
+        showDate: true
+        showAuthor: true
+        variant: variant-c

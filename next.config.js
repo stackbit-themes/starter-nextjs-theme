@@ -1,12 +1,10 @@
-const sourcebit = require('sourcebit');
-const sourcebitConfig = require('./sourcebit.js');
+const withSourcebit = require('sourcebit').sourcebitNext();
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
+    enabled: process.env.ANALYZE === 'true'
 });
 
-sourcebit.fetch(sourcebitConfig);
-
-module.exports = withBundleAnalyzer({
+module.exports = withSourcebit(withBundleAnalyzer({
+    typescript: { ignoreBuildErrors: true },
     trailingSlash: true,
     devIndicators: {
         autoPrerender: false
@@ -24,9 +22,9 @@ module.exports = withBundleAnalyzer({
         config.watchOptions.ignored.push('/content/');
         if (dev) {
             // enable tree shaking for development mode, on production it is on by default
-            config.optimization.usedExports = true;
+            // config.optimization.usedExports = true;
         }
 
         return config;
     }
-});
+}));

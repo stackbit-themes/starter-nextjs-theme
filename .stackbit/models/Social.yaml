@@ -44,6 +44,7 @@ fields:
       - label: YouTube
         value: youtube
     default: facebook
+    required: true
   - type: enum
     name: style
     group: styles

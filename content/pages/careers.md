@@ -1,6 +1,6 @@
 ---
 title: Careers
-layout: PageLayout
+type: PageLayout
 sections:
   - elementId: ''
     colors: colors-h
@@ -69,10 +69,9 @@ sections:
       - type: ImageBlock
         url: /images/post-2.jpg
         altText: People in the meeting room
-    spacing: 3
+    spacing: 48
     columns: 2
     aspectRatio: '1:1'
-    imageSizePx: 400
     styles:
       self:
         height: auto
