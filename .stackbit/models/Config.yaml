@@ -6,6 +6,7 @@ readOnly: true
 fieldGroups:
   - name: seo
     label: SEO
+    icon: page
 fields:
   - type: image
     name: favicon

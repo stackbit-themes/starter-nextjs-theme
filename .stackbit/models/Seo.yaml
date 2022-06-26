@@ -4,6 +4,7 @@ label: SEO
 fieldGroups:
   - name: seo
     label: SEO
+    icon: page
 fields:
   - type: string
     name: metaTitle

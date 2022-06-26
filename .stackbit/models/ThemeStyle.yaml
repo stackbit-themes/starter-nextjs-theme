@@ -5,10 +5,13 @@ file: style.json
 fieldGroups:
   - name: text-styles
     label: Text styles
+    icon: text
   - name: color-palettes
     label: Color palettes
+    icon: fill-drip
   - name: button-styles
     label: Button styles
+    icon: palette
 fields:
   - type: enum
     name: fontHeadlines

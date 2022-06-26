@@ -5,6 +5,7 @@ labelField: name
 fieldGroups:
   - name: settings
     label: Settings
+    icon: gear
 fields:
   - type: markdown
     name: quote

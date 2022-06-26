@@ -5,6 +5,7 @@ labelField: altText
 fieldGroups:
   - name: settings
     label: Settings
+    icon: gear
 fields:
   - type: image
     name: url

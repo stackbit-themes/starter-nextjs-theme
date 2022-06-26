@@ -5,6 +5,7 @@ labelField: title
 fieldGroups:
   - name: settings
     label: Settings
+    icon: gear
 fields:
   - type: string
     name: title
